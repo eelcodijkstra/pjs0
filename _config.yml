@@ -1,0 +1,29 @@
+# Site settings
+title: Tutorial Programmeren in JavaScript-0
+email: eelcodijkstra@ictindewolken.nl
+description: > # this means to ignore newlines until "baseurl:"
+  Dit tutorial vormt een inleiding in het programmaren in JavaScript
+  Het is ontwikkeld voor ICT in de Wolken. Het is bedoeld om gebruikt
+  te worden in combinatie met het boek:
+baseurl: "" # the subpath of your site, e.g. /blog/
+
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: ""
+
+# Collections
+collections:
+  notes:
+    output: true
+  drafts:
+    output: true
+  lessons:
+    output: true
