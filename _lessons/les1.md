@@ -161,3 +161,4 @@ Een aanroep van deze functie heeft de vorm: `square50();`
 ## Tips
 
 * je kunt de vorige opdracht in het console oproepen door het pijltje naar boven.
+* gebruik spaties en vormgeving zoals in de voorbeelden, om je programma's leesbaar te houden.

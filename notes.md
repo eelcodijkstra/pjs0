@@ -18,7 +18,7 @@ $("h2").each(function() {$(this).add($(this).nextUntil("h2")).wrapAll("<section 
 
 ```
 
-(Vlak voor de aanroep: 
+(Vlak voor de aanroep:  `$('body').tutorial({smartlines: false});` )
 
 ### Opmaak van code
 
