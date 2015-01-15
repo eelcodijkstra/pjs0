@@ -34,12 +34,13 @@ De knop *Clear canvas & log* maakt  het scherm schoon en zet de turtle in de beg
 
 *Opdrachten:*
 
-1. Teken met deze knoppen een vierkant. Laat de turtle de pen eerst op het papier zetten (anders zie je zo weinig). <br> *Hint:* klik een aantal malen op knop *testA();*
+1. Teken met deze knoppen een vierkant. <br> *Hint:* klik een aantal malen op knop *testA();*
 2. Je kunt de waarden in de witte invoer-vakjes veranderen. Teken nu een groter vierkant met `forward` en `right`.
 
 
 ## Log van acties
-In het venster naast het teken-canvas zie je de *log* van de acties die uitgevoerd zijn voor de tekening die je ziet. Deze reeks van acties vormen het *proces* waarvan de tekening het *resultaat* is.
+
+In het venster naast (of onder) het teken-canvas zie je de *log* van de acties die uitgevoerd zijn voor de tekening die je ziet. Deze reeks van acties vormen het *proces* waarvan de tekening het *resultaat* is.
 
 De knop voor het schoonvegen van het Canvas maakt ook deze log weer leeg.
 
@@ -77,15 +78,13 @@ Enkele tips voor het werken met JSBin:
 
 *Opdrachten:*
 
-1. Open het console-venster. Hier kun je JavaScript-opdrachten geven die direct uitgevoerd worden. Je kunt dit als rekenmachine gebruiken, voer bijvoorbeeld in `6 * 7`
-2. Sluit het console-venster, en open het Javascript-venster. Scroll naar het onderste deel van het venster, waar de "user defined functions" staan.
-3. De functies `testA`, `testB` en `testC` zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het "user defined commands" deelvenster. Probeer deze knoppen uit.
-4. Sluit het Javascript-venster, open het Console-venster, en roep de functie `testA` aan vanuit het console: `testA();`
+1. Open het Javascript-venster. Scroll naar het onderste deel van het venster, waar de "user defined functions" staan. De functies `testA`, `testB` en `testC` zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het "user defined commands" deelvenster. Probeer deze knoppen uit.
+2. Sluit het Javascript-venster, open het Console-venster, en roep de functie `testA` aan vanuit het console: `testA();`
 
 
 ## Console
 
-Je kunt voor de opdrachten voor de turtle ook het *console* gebruiken. Dit is zichtbaar in een apart venster. Hier kun je de opdrachten intoetsen zoals deze bij de knoppen staan, bijvoorbeeld: `forward(30);` (RETURN) <br> Je moet elke opdracht op het console afsluiten met de return-toets.
+Je kunt voor de opdrachten voor de turtle ook het *console* gebruiken. Hier kun je JavaScript-opdrachten geven die direct uitgevoerd worden. Voorbeeld:  `forward(30);` (RETURN) <br> Je moet elke opdracht op het console afsluiten met de return-toets.
 
 Let goed op de notatie: je moet precies de goede naam gebruiken, de juiste haakjes en de juiste leestekens, zoals de puntkomma.
 
@@ -97,8 +96,9 @@ Door bijv. `pos.x` of `down` in te voeren in het console kun je de toestand van 
 
 *Opdrachten:*
 
-1. Probeer nu een vierkant te tekenen door opdrachten op het console. <br>*Tip:* je kunt ook (een deel van) de log kopiëren naar het console (via Copy/Paste).
-2. Vraag de toestand van de turtle op via het console.
+1. Open het console-venster. Je kunt dit als rekenmachine gebruiken, voer bijvoorbeeld in: `6 * 7` (gevolgd door de return-toets).
+2. Probeer nu een vierkant te tekenen door opdrachten op het console. <br>*Tip:* je kunt ook (een deel van) de log kopiëren naar het console (via Copy/Paste).
+3. Vraag de toestand van de turtle op via het console.
 
 
 ## Functies: aanroep
@@ -116,9 +116,9 @@ functienaam(...parameters...)
 Enkele voorbeelden:
 
 ```js
-square50();
+penDown();
 forward(50);
-square50();
+turnRight(50, 90);
 ```
 
 We kunnen een functie ook koppelen aan een knop (button); een *click*  op die button zorgt dan voor een aanroep van die functie.
@@ -128,7 +128,7 @@ We kunnen een functie ook koppelen aan een knop (button); een *click*  op die bu
 *Opdrachten:*
 
 1. probeer als console-opdracht een aantal voorbeelden van functie-aanroepen, zoals in het voorbeeld;
-2. wat gebeurt er als je op het console `square50` invoert, dus zonder de `()`? <br> Of `penUp`?
+2. wat gebeurt er als je op het console `penUp` invoert, dus zonder de `()`? <br> Of `forward`?
 
 
 ## Functies: definitie
@@ -145,6 +145,8 @@ function square50() {
 }
 ```
 
+De groep opdrachten tussen de accolades `{...}` noemen we de *body* van de functie.
+
 Een aanroep van deze functie heeft de vorm: `square50();`
 
 ---
@@ -152,25 +154,10 @@ Een aanroep van deze functie heeft de vorm: `square50();`
 *Opdrachten:*
 
 1. Open het JavaScript-venster, en zoek onderaan naar de "user defined functions". Kopieer daar de functie `square50`.
-2. Definieer onderaan in dit venster de functie `testC` zo, dat deze eerst (i) een vierkant tekent met de functie `square50`, en daarna  (ii) 15 graden rechts draait.
-3. Roep deze functie herhaaldelijk aan door op de knop `testC();` te klikken. Maak eventueel eerst het canvas leeg.   
-4. Roep deze functie herhaaldelijk aan door de opdracht `testC();` in het console in te voeren. Met het pijltje omhoog haal je het vorige commando terug.
+2. Verander onderaan dit venster de body tussen `{...}` van de functie `testC` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
+3. Breidt de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
+3. Roep deze functie herhaaldelijk aan door op de knop `testC();` te klikken. Maak eventueel eerst het canvas leeg.
 
+## Tips
 
-## Witruimte
-Witruimte is de lege ruimte tussen en rond de tekst: spaties en regelovergangen. Dit is een belangrijk onderdeel van de vormgeving.
-
-* De browser ziet spaties in de html-tekst alleen als scheidingsteken.
-* De hoeveelheid wit in het resultaat hangt niet af van het aantal spaties in de html-tekst.
-* We gebruiken spaties in de html-tekst om deze voor mensen goed leesbaar te maken.
-
-De haken en de tekst *springen in*, als deze binnen andere haken geplaatst zijn. Hiermee maak je de tekst beter leesbaar. Doe dit zelf ook zelf altijd.
-
----
-
-*Opdrachten:*
-
-1. Ga na dat meer of minder wit in de html-tekst geen gevolg heeft voor het resultaat, door spaties en lege regels toe te voegen of te verwijderen.
-2. Wat is het resultaat de laatste (enige) spatie tussen twee woorden verwijdert?
-3. Hoe helpt de Thimble-editor je om de tekst tussen twee haken te laten inspringen?
-4. Je kunt een regelovergang in het resultaat afdwingen door middel van `<br>`. Dit is een element zonder sluithaak en zonder inhoud. (Waarom heeft dit geen sluithaak?) <br>  Probeer dit uit.
+* je kunt de vorige opdracht in het console oproepen door het pijltje naar boven.
