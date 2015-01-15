@@ -12,14 +12,15 @@ Dit is het eerste tutorial om te leren programmeren in Javascript. Naast deze tu
 
 ---
 
-Ga nu naar de volgende pagina.
+Ga nu naar de volgende pagina door op het pijltje rechtsboven dit tutorial-deel te klikken.
 
 
 ## Bestuur de Turtle
 Als eerste stap naar het programmeren gebruiken we een "tekenrobot". Stel je dit voor als een robot-schildpad (*turtle*) met een pen. Deze turtle kent de volgende opdrachten:
 
-* `forward(n)` - ga n stappen vooruit;
-* `right(n)` - draai n graden naar rechts;
+* `forward(n)` - ga *n* stappen vooruit;
+* `right(n)` - draai *n* graden naar rechts;
+* `turnright(r, n)` - maak een bocht met straal *r* over *n* graden;
 * `penUp()` - haal de pen van het tekenvel;
 * `penDown()` - zet de pen op het tekenvel.
 

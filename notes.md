@@ -11,6 +11,17 @@ Een mogelijke oplossing is om elke "h2" (in Markdown: `##`) om te vormen tot een
 
 Het zou gemakkelijk(er) kunnen als we elementen met een class-indicatie kunnen genereren vanuit Markdown. Maar ik weet niet hoe dat moet - volgens mij is dat geen onderdeel van de Markdown-spec.
 
+Voorlopige oplossing:
+
+```js
+$("h2").each(function() {$(this).add($(this).nextUntil("h2")).wrapAll("<section />")});
+
+```
+
+(Vlak voor de aanroep: 
+
 ### Opmaak van code
 
 Voor het opmaken van code gebruiken we de oplossing van *progblog*.
+
+###
