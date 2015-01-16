@@ -30,6 +30,13 @@ JSBin maakt gewoonlijk gebruik van JSLint of JSHint - je krijgt nette foutmeldin
 
 Heeft dit te maken met de jsbin-omgeving in een iframe? Hoe kun je die "sturen"? Kan dat van buiten?
 
+## Bij les 2
+
+* een functie zonder parameters kun je aan een knop koppelen.
+* voor een functie met parameters heb je daarbij een invoerveld nodig.
+    * moeten we ook een testknop maken met een invoerveld?
+    * en, misschien met twee invoervelden?
+    
 ### Principes
 
 Enkele principes bij het ontwikkelen van deze module:
@@ -45,4 +52,5 @@ Enkele principes bij het ontwikkelen van deze module:
 * bij de opdrachten herhalen we de onderwerpen uit de vorige lessen.
     * (NB: als we dit goed willen doen, moeten we ook opdrachten hebben die je met de begrippen uit de vorige lessen moet oplossen. Je leert dan ook te analyseren welke begrippen je nodig hebt: dat hoeft niet beslist het begrip van deze les te zijn.
     * we kunnen hiervoor "gemengde opdrachten" invoeren.
-  
+* gebruik voor definitie
+* concreet voor abstract
