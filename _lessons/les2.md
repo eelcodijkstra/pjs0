@@ -18,7 +18,9 @@ We hebben gezien hoe je in een functie-definitie een aantal opdrachten kunt groe
 
 Nu gaan we een stap verder: we definiëren functies met parameters.
 
-We hebben steeds de functies `forward(n)` en `right(n)` gebruikt: door de parameters - het aantal stappen vooruit, of het aantal stappen draaien - zijn deze functies handiger dan een functie die een vast aantal stappen gebruikt.
+We hebben steeds de functies `forward(n)` en `right(n)` gebruikt: de getallen die we tussen de haakjes geven -het aantal stappen vooruit, of het aantal graden draaien- zijn de parameters voor deze functies.
+
+Een functie zonder parameters voert altijd precies dezelfde opdrachten uit, met hetzelfde resultaat. Door het gebruik van parameters maak je een functie algemener bruikbaar. Je kunt de parameters zien als de *invoer* voor de functie.
 
 ---
 
@@ -30,8 +32,7 @@ We hebben steeds de functies `forward(n)` en `right(n)` gebruikt: door de parame
 
 ## Voorbeeld: vierkant
 
-Door een parameter voor de grootte in te voeren, kunnen we een algemene
-functie maken voor het tekenen van een vierkant:
+Door een parameter voor de grootte van een zijde in te voeren, kunnen we een algemene functie maken voor het tekenen van een vierkant:
       
 ```js
 function square(size) {
@@ -42,7 +43,9 @@ function square(size) {
 }
 ```
 
-We schrijven de parameter tussen de haakjes, na de naam van de functie.
+We schrijven de naam van de parameter tussen de haakjes, na de naam van de functie.
+
+In de body voor de functie gebruiken we deze naam: deze staat dan voor de waarde die bij de aanroep meegegeven wordt.
 
 ---
 

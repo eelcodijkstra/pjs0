@@ -24,4 +24,25 @@ $("h2").each(function() {$(this).add($(this).nextUntil("h2")).wrapAll("<section 
 
 Voor het opmaken van code gebruiken we de oplossing van *progblog*.
 
-###
+### JSLint/JSHint
+
+JSBin maakt gewoonlijk gebruik van JSLint of JSHint - je krijgt nette foutmeldingen als er iets mis is. Maar kennelijk werkt dit niet meer op het moment dat JSBin in een iframe geplaatst is. Erg jammer...
+
+Heeft dit te maken met de jsbin-omgeving in een iframe? Hoe kun je die "sturen"? Kan dat van buiten?
+
+### Principes
+
+Enkele principes bij het ontwikkelen van deze module:
+
+* kleine stappen: we voeren de begrippen zoveel mogelijk stap voor stap in;
+* bij elk begrip geven we voorbeelden van het gebruik
+* bij elk begrip proberen we aan te geven hoe je hiermee een *probleem* kunt oplossen
+    * welke rol speelt dit begrip bij het oplossen van problemen?
+    * waar moet je om denken als je deze constructie gebruikt?
+* de opdrachten zijn bedoeld om direct te oefenen in het gebruik van het begrip
+    * eerst: variaties op gegeven voorbeelden
+    * dan: oplossen van een "nieuw" probleem met dit begrip.
+* bij de opdrachten herhalen we de onderwerpen uit de vorige lessen.
+    * (NB: als we dit goed willen doen, moeten we ook opdrachten hebben die je met de begrippen uit de vorige lessen moet oplossen. Je leert dan ook te analyseren welke begrippen je nodig hebt: dat hoeft niet beslist het begrip van deze les te zijn.
+    * we kunnen hiervoor "gemengde opdrachten" invoeren.
+  
