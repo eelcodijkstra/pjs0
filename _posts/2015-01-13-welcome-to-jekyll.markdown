@@ -1,12 +1,7 @@
 ---
 layout: post
-<<<<<<< Updated upstream
 title:  "Welkom bij programmeren in JavaScript"
-date:   2015-01-16
-=======
-title:  "Welcome to JavaScript Programming"
 date:   2015-jan-16
->>>>>>> Stashed changes
 ---
 
 

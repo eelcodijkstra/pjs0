@@ -137,7 +137,6 @@ We gaan nu zelf een functie definiëren. We groeperen een reeks opdrachten met b
 
 ```js
 function square50() {
-  penDown();
   forward(50); right(90);
   forward(50); right(90);
   forward(50); right(90);
@@ -157,6 +156,55 @@ Een aanroep van deze functie heeft de vorm: `square50();`
 2. Verander onderaan dit venster de body tussen `{...}` van de functie `testC` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
 3. Breid de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
 3. Roep deze functie herhaaldelijk aan door op de knop `testC();` te klikken. Maak eventueel eerst het canvas leeg.
+
+## Voorbeeld: driehoek
+
+Een volgende opdracht is om een driehoek te tekenen - op dezelfde manier als het vierkant.
+
+> ![Figuur van een driehoek](figs/triangle50.png)
+
+Zorg ervoor dat de turtle na het tekenen van de driehoek weer precies in dezelfde positie staat.
+
+---
+
+*Opdrachten*:
+
+1. probeer op dezelfde manier als de functie `square50`, een functie `triangle50` te maken die een driehoek tekent.
+2. test deze functie door een aanroep hiervan in de functie `testB` te plaatsen. Controleer dat de turtle weer in dezelfde positie terugkomt - door de button `testB` herhaald in te drukken.
+3. verander de functie `testB` zodat na het tekenen van de driehoek, de turtle 15 grander naar rechts draait. Test dit met de button.
+
+## Uitwerking: driehoek
+
+Een mogelijke uitwerking voor de driehoek is:
+
+```js
+function triangle50() {
+  forward(50); right(120);
+  forward(50); right(120);
+  forward(50); right(120);
+}
+```
+
+---
+
+*Opdracht(en):*
+
+1. probeer op eenzelfde manier een 5-hoek te maken.
+2. hoe ziet het algemene patroon voor een n-hoek eruit? (Later zullen we daarvoor een functie maken.)
+
+## Opdracht: huisje
+
+Een eenvoudig huisje ziet er als volgt uit:
+
+> ![Figuur van een huisje](figs/house50.png "house50")
+
+---
+
+*Opdrachten*
+
+1. probeer een huisje te tekenen door eerst een driehoek te tekenen, en dan een vierkant (met de buttons die de functies voor de driehoek en het vierkant aanroepen). <br> Gaat dit goed?
+2. als je eerste poging geen huisje oplevert, probeer dan uit te vinden welke extra opdrachten je nodig hebt om met je driehoek- en vierkant-functies een huisje te tekenen.
+3. definieer een functie voor het tekenen van een huisje. Test deze met behulp van `testA`.
 
 ## Tips
 
