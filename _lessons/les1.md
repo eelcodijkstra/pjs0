@@ -67,7 +67,7 @@ De plaats, de richting, en de pen-positie vormen samen de *toestand* of *state* 
 4. Wat gebeurt er als je een negatief getal invoert als parameter voor `forward`?
 
 
-## Open en sluiten van vensters
+## JSBin tips
 
 Enkele tips voor het werken met JSBin:
 
@@ -78,7 +78,7 @@ Enkele tips voor het werken met JSBin:
 
 *Opdrachten:*
 
-1. Open het Javascript-venster. Scroll naar het onderste deel van het venster, waar de "user defined functions" staan. De functies `testA`, `testB` en `testC` zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het "user defined commands" deelvenster. Probeer deze knoppen uit.
+1. Open het JavaScript-venster. Scroll naar het onderste deel van het venster, waar de "user defined functions" staan. De functies `testA`, `testB` en `testC` zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het "user defined commands" deelvenster. Probeer deze knoppen uit.
 2. Sluit het Javascript-venster, open het Console-venster, en roep de functie `testA` aan vanuit het console: `testA();`
 
 
@@ -155,7 +155,7 @@ Een aanroep van deze functie heeft de vorm: `square50();`
 
 1. Open het JavaScript-venster, en zoek onderaan naar de "user defined functions". Kopieer daar de functie `square50`.
 2. Verander onderaan dit venster de body tussen `{...}` van de functie `testC` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
-3. Breidt de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
+3. Breid de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
 3. Roep deze functie herhaaldelijk aan door op de knop `testC();` te klikken. Maak eventueel eerst het canvas leeg.
 
 ## Tips
