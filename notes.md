@@ -54,3 +54,12 @@ Enkele principes bij het ontwikkelen van deze module:
     * we kunnen hiervoor "gemengde opdrachten" invoeren.
 * gebruik voor definitie
 * concreet voor abstract
+
+### Opmerkingen bij Turtle-opdrachten
+
+Voor de turtle hebben we enkele keuzes gemaakt die afwijken van wat elders gebruikelijk is:
+
+* de opdracht `turnRight` (of `circleRight`?) werkt anders dan de `circle` opdracht in Python-turtle:
+    * `circleRight(r, -90)` geeft een draai naar links (in Python geef je dit aan met een negatieve straal: `t.circle(-r, 90)`. 
+    * een gevolg van deze aanpak is dat de hoeken van `right` en `circleRight` bij elkaar opgeteld kunnen worden, om te bepalen wat de totale rotatie van de turtle is.
+    
