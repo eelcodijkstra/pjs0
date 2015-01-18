@@ -8,7 +8,7 @@ layout: lesson
 
 ## Programmeren in JavaScript - Les 1
 
-Dit is het eerste tutorial om te leren programmeren in Javascript. Naast deze tutorials is er een uitleg via het boek, hoofdstuk "Elementaire opdrachten en opeenvolging".
+Dit is het eerste tutorial om te leren programmeren in JavaScript. Naast deze tutorials is er een uitleg via het boek, hoofdstuk "Elementaire opdrachten en opeenvolging".
 
 ---
 
@@ -79,12 +79,12 @@ Enkele tips voor het werken met JSBin:
 *Opdrachten:*
 
 1. Open het JavaScript-venster. Scroll naar het onderste deel van het venster, waar de "user defined functions" staan. De functies `testA`, `testB` en `testC` zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het "user defined commands" deelvenster. Probeer deze knoppen uit.
-2. Sluit het Javascript-venster, open het Console-venster, en roep de functie `testA` aan vanuit het console: `testA();`
+2. Sluit het JavaScript-venster, open het Console-venster, en roep de functie `testA` aan vanuit het console: `testA();`
 
 
 ## Console
 
-Je kunt voor de opdrachten voor de turtle ook het *console* gebruiken. Hier kun je JavaScript-opdrachten geven die direct uitgevoerd worden. Voorbeeld:  `forward(30);` (RETURN) <br> Je moet elke opdracht op het console afsluiten met de return-toets.
+Op het console kun je JavaScript opdrachten invoeren die direct uitgevoerd worden. Dit kun je ook gebruiken voor de turtle. Voorbeeld:<br>`forward(30);` (RETURN) <br> Je moet elke opdracht op het console afsluiten met de return-toets.
 
 Let goed op de notatie: je moet precies de goede naam gebruiken, de juiste haakjes en de juiste leestekens, zoals de puntkomma.
 
@@ -103,7 +103,7 @@ Door bijv. `pos.x` of `down` in te voeren in het console kun je de toestand van 
 
 ## Functies: aanroep
 
-Door middel van een programma kun je de turtle opdrachten uit laten voeren zonder deze steeds zelf in te voeren.
+Door middel van een programma kun je de turtle opdrachten uit laten voeren zonder deze steeds zelf in te voeren. Je kunt zo de turtle "automatiseren".
 
 Een *functie* is een stukje programma dat we een naam geven.
 
@@ -153,9 +153,9 @@ Een aanroep van deze functie heeft de vorm: `square50();`
 *Opdrachten:*
 
 1. Open het JavaScript-venster, en zoek onderaan naar de "user defined functions". Kopieer daar de functie `square50`.
-2. Verander onderaan dit venster de body tussen `{...}` van de functie `testC` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
+2. Zoek de functie `testC`. Verander de body tussen `{...}` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
 3. Breid de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
-3. Roep deze functie herhaaldelijk aan door op de knop `testC();` te klikken. Maak eventueel eerst het canvas leeg.
+3. Maak een figuur door een aantal malen op de button `testC();` te klikken.
 
 ## Voorbeeld: driehoek
 
@@ -210,3 +210,5 @@ Een eenvoudig huisje ziet er als volgt uit:
 
 * je kunt de vorige opdracht in het console oproepen door het pijltje naar boven.
 * gebruik spaties en vormgeving zoals in de voorbeelden, om je programma's leesbaar te houden.
+* om handig met de ruimte om te gaan, kun je in JSBin steeds de vensters sluiten die je niet gebruikt.
+* als je in het JavaScript venster foute code invoert, krijg je foutmeldingen in het console-venster. Als je dat niet geopend hebt, zie je die foutmeldingen niet.
