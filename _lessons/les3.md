@@ -198,8 +198,8 @@ Maar je kunt het ook anders doen. Probeer zelf een (of meer) andere manieren te 
 
 *Opdrachten:*
 
-* PM
-* PM
+1. PM
+2. PM
 
 
 ## Andere manieren (2)
