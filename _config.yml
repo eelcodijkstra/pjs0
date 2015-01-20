@@ -5,9 +5,9 @@ description: > # this means to ignore newlines until "baseurl:"
   Dit tutorial vormt een inleiding in het programmaren in JavaScript
   Het is ontwikkeld voor ICT in de Wolken. Het is bedoeld om gebruikt
   te worden in combinatie met het boek:
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/pjs0/" # the subpath of your site, e.g. /blog/
 
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://eelcodijkstra.github.io" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
