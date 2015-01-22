@@ -15,7 +15,7 @@ Ga nu naar de volgende pagina.
 
 ## Keuze: if ... else
 
-In deze les maken we kennis met de keuze-opdracht: het "if-statement". We spreken ook wel over de conditionele opdracht. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
+In deze les maken we kennis met de keuze-opdracht: het `if`-statement", ofwel de *conditionele opdracht*. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
 
 ```js
   if (cond) {
@@ -33,7 +33,7 @@ Er is ook een verkorte vorm, zonder `else`-deel. In dat geval wordt als de condi
 
 *Opdrachten:*
 
-1. Let op de plaats van de accolades, spaties en regelovergangen. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
+1. Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
 
     
 ## Condities en vergelijkingen
@@ -79,10 +79,10 @@ We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar i
 
 Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
 
-*`a &lt;  b` &nbsp; - a kleiner dan b
-*`a &lt;= b` - a ten hoogste b
-*`a &gt;  b` &nbsp; - a groter dan b
-*`a &gt;= b` - a ten minste b
+* `a <  b` &nbsp; - a kleiner dan b
+* `a <= b` - a ten hoogste b
+* `a >  b` &nbsp; - a groter dan b
+* `a >= b` - a ten minste b
 
 ---
 
@@ -98,7 +98,7 @@ We willen soms het minimum of het maximum van twee of meer getallen bepalen. We 
       
 ```js
 function min(a, b) {
-  if (a &lt; b) {
+  if (a < b) {
     return a;
   } else {
     return b;
@@ -113,7 +113,7 @@ We zullen later zien dat we deze functie ook anders kunnen schrijven, als een *c
 *Opdrachten:*
 
 1. Kopieer deze functie naar het JS-deelvenster, en test deze functie met een aantal voorbeelden via het console.
-2. Maakt het uit of we `a &lt;= b` als conditie gebruiken, in plaats van `a &lt; b` ?
+2. Maakt het uit of we hier `a <= b` als conditie gebruiken, in plaats van `a < b` ?
 3. Schrijf een functie `max` die het maximum van twee getallen bepaalt.
         
   
@@ -131,7 +131,7 @@ Een slinger is een figuur die er als volgt uitziet:
 
 ## Voorbeeld: grensgevallen
 
-We gebruiken if-opdrachten vaak voor grensgevallen. Je kunt je voorstellen dat de turtle bij de "grens" van het Canvas (tekenvel) zich anders gaat gedragen. We geven eerst een voorbeeld waarbij de turtle "botst" en terugkaatst. Dit effect zien we alleen goed bij kleine verplaatsingen: een grote verplaatsing maken we dan met behulp van herhaling
+We gebruiken if-opdrachten vaak voor grensgevallen. Je kunt je voorstellen dat de turtle bij de "grens" van het Canvas (tekenvel) zich anders gaat gedragen. We geven eerst een voorbeeld waarbij de turtle "botst" en terugkaatst. Dit effect zien we alleen goed bij kleine verplaatsingen: een grote verplaatsing maken we dan met behulp van herhaling.
       
 ```js
 function fdStep() {
