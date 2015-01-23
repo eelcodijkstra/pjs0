@@ -30,6 +30,8 @@ JSBin maakt gewoonlijk gebruik van JSLint of JSHint - je krijgt nette foutmeldin
 
 Heeft dit te maken met de jsbin-omgeving in een iframe? Hoe kun je die "sturen"? Kan dat van buiten?
 
+Zie de issues op GitHUb: de uitbreidingen voor de editor worden alleen geactiveerd voor de niet-embedded versie. We kunnen dit dus niet realiseren door ergens een variable een andere waarde te geven...
+
 ## Bij les 2
 
 * een functie zonder parameters kun je aan een knop koppelen.
