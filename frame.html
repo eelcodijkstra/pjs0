@@ -12,7 +12,6 @@
   </head>
   <body>
     <div>
-      <h1 id="lesHeader" >Les 1</h1>
       <iframe id="tutorialFrame" src="lessons/les1.html" height="650" width="25%">
       </iframe>
       <a class="jsbin-embed" id="xxxx"
@@ -32,13 +31,17 @@
       <button id="les10Button">les 10</button>
     </div>
     <script>
+      var prevButton = document.getElementById("les1Button");
 
       function makeHandler(nr) {
         return function() {
           var tFrame = document.getElementById("tutorialFrame");
-          var lesHeader = document.getElementById("lesHeader");
+          var myButton = document.getElementById("les" + nr + "Button");
           tFrame.src = "lessons/les" + nr + ".html";
           lesHeader.innerHTML = "Les " + nr;
+          myButton.style.backgroundColor = "blue";
+          prevButton.style.backgroundColor = "";
+          prevButton = myButton;
         }
       }
 
