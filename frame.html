@@ -32,15 +32,16 @@
     </div>
     <script>
       var prevButton = document.getElementById("les1Button");
+      prevButton.style.backgroundColor = "lightblue";
 
       function makeHandler(nr) {
         return function() {
+          // alert("button: " + nr);
           var tFrame = document.getElementById("tutorialFrame");
           var myButton = document.getElementById("les" + nr + "Button");
           tFrame.src = "lessons/les" + nr + ".html";
-          lesHeader.innerHTML = "Les " + nr;
-          myButton.style.backgroundColor = "blue";
           prevButton.style.backgroundColor = "";
+          myButton.style.backgroundColor = "lightblue";
           prevButton = myButton;
         }
       }
