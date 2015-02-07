@@ -65,3 +65,6 @@ Voor de turtle hebben we enkele keuzes gemaakt die afwijken van wat elders gebru
     * `circleRight(r, -90)` geeft een draai naar links (in Python geef je dit aan met een negatieve straal: `t.circle(-r, 90)`. 
     * een gevolg van deze aanpak is dat de hoeken van `right` en `circleRight` bij elkaar opgeteld kunnen worden, om te bepalen wat de totale rotatie van de turtle is.
     
+## Opmerkingen bij de vormgeving (tutorial frame)
+
+* de margin aan de onderkant is 60px groot; dit kan beter 20px zijn. De marge aan de bovenkant is 60 px vanwegen het navigatie-deel.
