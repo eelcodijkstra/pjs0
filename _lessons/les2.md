@@ -7,18 +7,19 @@ layout: lesson
 
 ## Programmeren in JavaScript - Les 2
 
-Dit is de tweede les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
+Dit is de tweede les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via het boek: [functies en parameters](http://infvo.com/books/pjs-0/Chapter%203/README.html).
      
 
 Ga nu naar de volgende pagina. 
     
      
 ## Functies met parameters
+
 We hebben gezien hoe je in een functie-definitie een aantal opdrachten kunt groeperen en een naam kunt geven.
 
 Nu gaan we een stap verder: we definiëren functies met parameters.
 
-We hebben steeds de functies `forward(n)` en `right(n)` gebruikt: de getallen die we tussen de haakjes geven -het aantal stappen vooruit, of het aantal graden draaien- zijn de parameters voor deze functies.
+We hebben steeds de functies `forward(n)` en `right(n)` gebruikt. De getallen die we tussen de haakjes geven: het aantal stappen vooruit, of het aantal graden draaien, zijn de parameters voor deze functies.
 
 Een functie zonder parameters voert altijd precies dezelfde opdrachten uit, met hetzelfde resultaat.
 
@@ -26,10 +27,51 @@ Door parameters te gebruiken maak je een functie algemener bruikbaar. Je kunt de
 
 ---
 
+## Voorbeeld: zijde van een vierkant
+
+De elementaire stap bij het tekenen van een vierkant is de volgende functie:
+
+```js
+function sqEdge(size) {
+  forward(size);
+  right(90);
+}
+```
+
+---
+
+*Opdracht*:
+
+1. Kopieer deze definitie naar het JavaScript-venster, in het deel voor de *user-defined functions*.
+2. Test deze function, door deze aan te roepen vanaf het Console. Gebruik verschillende waarden voor de parameter `size`.
+3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep `sqEdge(40);`
+4. Teken met deze button een vierkant.
 
 ## Voorbeeld: vierkant
 
-Door een parameter voor de lengte van een zijde toe te voegen, kunnen we een algemene functie maken voor het tekenen van een vierkant:
+Met deze stap kunnen we een vierkant tekenen, van willekeurige grootte:
+
+```js
+function square(size) {
+  sqEdge(size);
+  sqEdge(size);
+  sqEdge(size);
+  sqEdge(size);
+}
+```
+
+---
+
+*Opdrachten*:
+
+1. Kopieer deze functie naar het *user-defined functions*-deel.
+2. Test deze functie, door deze vanuit het Console aan te roepen met verschillende waarden voor de parameter `size`.
+3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep `square(40);`. 
+4. Verander de testfunctie, door na het tekenen van het vierkant de turtle 15 graden te laten draaien. Teken met deze button een fraaie figuur.
+
+## Voorbeeld: vierkant
+
+Door een parameter voor de lengte van een zijde toe te voegen, maken we een algemene functie voor het tekenen van een vierkant:
       
 ```js
 function square(size) {
@@ -96,7 +138,31 @@ Als je deze functie uitvoert, krijg je niet het gebruikelijke huisje te zien. Ho
 3. Maak de definitie van `house` zo dat het huisje getekend wordt 'als een doorlopende lijn', zonder de pen van het papier te halen.
 4. Merk je aan de kant van het gebruik (de test) iets van deze verandering?     
 
-  
+
+## Functies met meerdere parameters
+
+Als we de stap voor het tekenen van een zijde algemeen willen maken, zodat we deze kunnen gebruiken voor een vierkant en voor een driehoek, dan  moeten we twee parameters gebruiken:
+
+* de eerste parameter, `size`, geeft de grootte van de zijde aan;
+* de tweede parameter, `n`, geeft het aantal graden aan dat de turtle draait.
+
+```js
+function edge(size, n) {
+  forward(size);
+  right(n);
+}
+```
+
+---
+
+*Opdrachten*:
+
+1. Kopieer deze functie naar het *user0defined functions* deel.
+2. Test deze functie, door deze met verschillende waarden voor de parameter aan te roepen vanaf het Console.
+2. Koppel deze functie aan een button. Wat voor figuren krijg je bij de verschillende waarden voor de parameter `n` (het aantal graden)?
+3. Wat voor figuren krijg je als `n` een deler is van 360?
+4. Wat voor figuren krijg je als `n` niet een deler is van 360? (bijv.: 100?)
+
 ## Functies met meerdere parameters
 
 We hebben een turtle-opdracht met meerdere parameters:

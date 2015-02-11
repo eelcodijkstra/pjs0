@@ -38,7 +38,7 @@ Als eerste stap naar het programmeren gebruiken we een "tekenrobot". Stel je dit
 
 * `forward(n)` - ga *n* stappen vooruit;
 * `right(n)` - draai *n* graden naar rechts;
-* `turnright(r, n)` - maak een bocht met straal *r* over *n* graden;
+* `turnRight(r, n)` - maak een bocht met straal *r* over *n* graden;
 * `penUp()` - haal de pen van het tekenvel;
 * `penDown()` - zet de pen op het tekenvel.
 

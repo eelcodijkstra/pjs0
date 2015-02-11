@@ -23,12 +23,6 @@ We willen kunnen rekenen met waarden, zodat we bijvoorbeeld kunnen schrijven:
 In JavaScript gebruiken we hiervoor *expressies* (uitdrukkingen).
 
 ---
-
-*Opdrachten:*
-
-1. PM
-2. PM
-
     
 ## Rekenen met het console
 
@@ -44,47 +38,62 @@ Selecteer de tab "Console", en maak eventueel ruimte door de andere tabs te slui
 3. Door haakjes te gebruiken, kun je de volgorde in de berekening veranderen, bijvoorbeeld `(2 + 3) * 4`. Probeer dit uit.
         
       
-## Functies
+## Functies: aanroep
 
-Zoals ook bij de andere elementen voor het bouwen van programma's, hebben we hier
-te maken met:
+Met behulp van een functie kunnen we een samengestelde uitdrukking een naam geven, en van parameters voorzien.
 
-* elementaire bouwstenen (waarden, hier getallen; en operaties, zoals optellen);
-* samenstellen van bouwstenen (hier: uitdrukkingen, eventueel met meerdere waarden, operatoren, en haakjes);
-* benoemen van een samenstelling, om deze tot een nieuwe bouwsteen te maken.
+De aanroep van een functie heeft de vorm:
 
-Voor deze benoemde expressies gebruiken we functies, zoals we deze tot nu toe gezien hebben. Met één verschil: de functie levert een resultaat op waarmee we in het programma verder kunnen rekenen.
+```js
+functienaam(... parameters ...)
+```
 
-Voorgedefinieerde functies: `Math.sqrt` enz.
+Met het resultaat van een functies kunnen we direct verder rekenen in een expressie:
+
+```js
+3 * sqr(4 + 2)
+```
+
+In de volgende opdracht behandelen we de definitie van `sqr`.
+
+In JavaScript zijn de meest gebruikte wiskundige functies voorgedefinieerd. Enkele voorbeelden:
+
+`Math.sqrt(4)` - vierkantswortel (square root): `2`
+`Math.sin(Math.PI / 2)` - sinus, van pi: `1`
+`Math.random()` - random getal tussen 0 en 1 (tot aan 1) : bijv. `0.123`
+
+Zie: [MDN: Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+
+De notatie `Math.naam` leggen we later uit.
 
 ---
 
 *Opdrachten:*
 
-1. PM
-2. PM
-
+1. Probeer de bovenstaande functies, via het console.
+2. Probeer voorbeelden van uitdrukkingen waarin je een functie gebruikt in combinatie met operatoren en een andere functie.
+3. Ga na welke functies nog meer gedefinieerd zijn voor `Math`, en probeer enkele daarvan uit.
 
     
-## Voorbeelden
+## Functies: definitie
 
-Enkele voorbeelden
+Met behulp van de opdracht `return` geven we de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
 
 ```js
-function dubbel(a) {
-  return 2 * a;
+function twice(a) {
+  return a + a;
 }
 
-function kwadraat(num) {
-  return num * num;
+function sqr(x) {
+  return x * x;
 }
 ```
 
 Voorbeelden van het gebruik hiervan:
       
 ```js
-vierkant(double(4) + 2);
-vierkant(square(2+3));
+square(twice(4) + 2);
+square(sqr(2+3));
 ```
 
 ---
@@ -92,24 +101,14 @@ vierkant(square(2+3));
 *Opdrachten:*
 
 1. Definieer zelf een functie `triple` die het drievoud van de parameter oplevert.
-2. Hoe kun je de functie `double` anders schrijven?
-3. Definieer een functie `rectangleSurface(width, height)` die de oppervlakte van een rechthoek berekent.
-4. Hoe zou je de functie `double` kunnen testen? En de functie `square`?
-
-
-## Namen en naamsconflicten
-
-We hebben de functie hiervoor "kwadraat" genoemd - en niet "square"... waarom? <br> We hebben al een functie "square", namelijk voor het tekenen van een vierkant. En we kunnen een naam maar één keer gebruiken. (Welke betekenis zou je anders bedoelen?) <br> Zoals je ziet geeft deze regel soms aanleiding tot vreemde namen. Dat is niet alleen een gebrek aan fantasie. We zullen later zien welke hulpmiddelen we hebben om minder last te hebben van dit soort problemen.
-
----
-
-*Opdrachten:*
-
-1. PM
-2. PM
+2. Hoe kun je de functie `twice` anders schrijven?
+3. Definieer een functie `surface(width, height)` die de oppervlakte van een rechthoek berekent.
+4. Hoe zou je de functie `twice` kunnen testen? En de functie `sqr`?
 
 
 ## Voorbeeld: blad
+
+Nu we kunnen rekenen met parameters, kunnen we ook interessantere teken-functies maken.
 We geven hier een voorbeeld van een functie om een blad te tekenen:
 
 ```js
@@ -122,13 +121,17 @@ function leaf(rad, deg) {
 }
 ```
 
+Deze functie tekent een blad met kromming (straal) `rad`, en hoek (bij begin en eind) `deg`.
+
+Na afloop van het tekenen van het blad staat de turtle weer op dezelfde positie, in dezelfde richting als voorheen.
+
 ---
 
 *Opdrachten:*
 
 1. Kopieer deze functie naar het JavaScript-deel voor user-defined functions.
-2. Probeer deze functie uit met verschillende waarden voor de parameters.
-3. Gebruik een van de test-functies voor het tekenen van een blad, gevolgd door een draai, bijv. `right(30);` <br> Teken een bloem.
+2. Koppel deze functie  aan knop C (aanroep vanuit `testButtonC`). Probeer deze functie uit met verschillende waarden voor de parameters
+3. Breid de body `testButtonC` uit: na de aanroep van `leaf` laat je de turtle draaien, bijv. `right(30);` <br> Teken een bloem.
 4. Wat is de rol van de eerste opdracht, `right(-deg);` ?
 5. Wat is de rol van de middelste opdracht, `right(180 - 2 * deg);` ?
 6. Wat is de rol van de laatste opdracht, `right(180 - deg);` ?
@@ -160,8 +163,7 @@ de vorm van de bloem mee aan te geven?
 
 ## Opstap naar herhaling
 
-We willen het hele Canvas vullen met vierkanten van dezelfde grootte. Dit doen we door een basisfiguur steeds te herhalen. Hoe ziet deze basisfiguur eruit? Hebben we aan één basisfiguur
-genoeg?
+We willen het hele Canvas vullen met vierkanten van dezelfde grootte. Dit doen we door een basisfiguur steeds te herhalen. Hoe ziet deze basisfiguur eruit? Hebben we aan één basisfiguur genoeg?
 
 De basisfiguur moet meer zijn dan alleen een vierkant. Immers, als we een vierkant tekenen, komen we weer op het beginpunt uit. Als we daar weer een vierkant tekenen, overlapt deze precies met de vorige: we komen niet verder.
 
