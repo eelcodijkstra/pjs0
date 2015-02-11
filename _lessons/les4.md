@@ -13,6 +13,7 @@ Ga nu naar de volgende pagina.
 
 
 ## Herhaling
+
 In dit hoofdstuk maken we kennis met herhaling - en daarmee met de kracht van computers. We beginnen met een eenvoudige vorm van herhaling: we geven vooraf op hoe vaak een bepaalde actie uitgevoerd moet worden.
 
 Hiervoor maken we gebruik van de volgende functie:
