@@ -5,7 +5,7 @@ date: 16-jan-2015
 layout: lesson
 ---
     
-## Programmeren in JavaScript - Les 4
+## Programmeren in JavaScript - Les 4: herhaling
 
 Dit is de vierde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
 

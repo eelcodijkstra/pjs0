@@ -6,7 +6,7 @@ layout: lesson
 ---
 
 
-## Programmeren in JavaScript - Les 3
+## Programmeren in JavaScript - Les 3: Rekenen
 
 Dit is de derde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
 
@@ -23,9 +23,9 @@ We willen kunnen rekenen met waarden, zodat we bijvoorbeeld kunnen schrijven:
 In JavaScript gebruiken we hiervoor *expressies* (uitdrukkingen).
 
 ---
-    
-## Rekenen met het console
 
+
+## Rekenen via het console
 
 Selecteer de tab "Console", en maak eventueel ruimte door de andere tabs te sluiten. <br> In de opdrachten moet je steeds een regel invoeren in het console. Denk erom dat je de regel afsluit met een return (anders kun je lang wachten).
       
@@ -38,11 +38,9 @@ Selecteer de tab "Console", en maak eventueel ruimte door de andere tabs te slui
 3. Door haakjes te gebruiken, kun je de volgorde in de berekening veranderen, bijvoorbeeld `(2 + 3) * 4`. Probeer dit uit.
         
       
-## Functies: aanroep
+## Rekenen met functies
 
-Met behulp van een functie kunnen we een samengestelde uitdrukking een naam geven, en van parameters voorzien.
-
-De aanroep van een functie heeft de vorm:
+Je kunt in een expressie ook een functie gebruiken. Het gaat daarbij om functies die een waarde opleveren als resultaat. De aanroep van een functie heeft de vorm:
 
 ```js
 functienaam(... parameters ...)
@@ -77,7 +75,7 @@ De notatie `Math.naam` leggen we later uit.
     
 ## Functies: definitie
 
-Met behulp van de opdracht `return` geven we de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
+Met behulp van een functie kunnen we een samengestelde uitdrukking een naam geven, en van parameters voorzien. Met de opdracht `return` geven we de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
 
 ```js
 function twice(a) {
@@ -106,7 +104,7 @@ square(sqr(2+3));
 4. Hoe zou je de functie `twice` kunnen testen? En de functie `sqr`?
 
 
-## Voorbeeld: blad
+## Tekene en rekenen: teken een blad
 
 Nu we kunnen rekenen met parameters, kunnen we ook interessantere teken-functies maken.
 We geven hier een voorbeeld van een functie om een blad te tekenen:
@@ -130,8 +128,8 @@ Na afloop van het tekenen van het blad staat de turtle weer op dezelfde positie,
 *Opdrachten:*
 
 1. Kopieer deze functie naar het JavaScript-deel voor user-defined functions.
-2. Koppel deze functie  aan knop C (aanroep vanuit `testButtonC`). Probeer deze functie uit met verschillende waarden voor de parameters
-3. Breid de body `testButtonC` uit: na de aanroep van `leaf` laat je de turtle draaien, bijv. `right(30);` <br> Teken een bloem.
+2. Plaats de aanroep `leaf(x, y)`  in de button-functie `testC` . Probeer verschillende waarden voor de parameters van de button.
+3. Breid de body `testC` uit: na de aanroep van `leaf` laat je de turtle draaien, bijv. `right(30);` <br> Teken een bloem.
 4. Wat is de rol van de eerste opdracht, `right(-deg);` ?
 5. Wat is de rol van de middelste opdracht, `right(180 - 2 * deg);` ?
 6. Wat is de rol van de laatste opdracht, `right(180 - deg);` ?
@@ -142,22 +140,31 @@ Na afloop van het tekenen van het blad staat de turtle weer op dezelfde positie,
 Een functie-definitie voor het tekenen van een bloem kan er als volgt uitzien:
 
 ```js
+function leafStep(rad, deg) {
+  leaf(rad, deg);
+  right(45);
+}
+
 function flower() {
-  // ... body: a lot of leaves ...
+  leafStep(30, 45);
+  leafStep(30, 45);
+  leafStep(30, 45);
+  leafStep(30, 45);
+  leafStep(30, 45);
+  leafStep(30, 45);
+  leafStep(30, 45);
+  leafStep(30, 45);
 }
 ```
 
-Maak deze functie.
-
-*Hint:* teken de bloem van de vorige opdracht, en kopieer de opdrachten
-vanuit het log-venster naar de body.
+We zullen in de volgende les zien hoe je deze herhaling handiger kunt opschrijven.
 
 ---
 
 *Opdrachten:*
 
-1. Kopieer deze definitie naar het JavaScript-venster; vul de opdrachten in de "body" van deze functie in door (i) de bloem te tekenen uit de vorige opdracht; (ii) de opdrachten te kopiëren vanuit het log-venster naar de functie-body.
-2. Je krijgt zo steeds dezelfde bloem; welke parameters zou je kunnen gebruiken om
+1. Kopieer deze definitie naar het JavaScript-venster. Koppel deze vul de opdrachten in de "body" van deze functie in door (i) de bloem te tekenen uit de vorige opdracht; (ii) de opdrachten te kopiëren vanuit het log-venster naar de functie-body.
+2. Je krijgt zo steeds dezelfde bloem. Welke parameters zou je kunnen gebruiken om
 de vorm van de bloem mee aan te geven?
 
 
