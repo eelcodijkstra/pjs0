@@ -104,7 +104,7 @@ square(sqr(2+3));
 4. Hoe zou je de functie `twice` kunnen testen? En de functie `sqr`?
 
 
-## Tekene en rekenen: teken een blad
+## Tekenen en rekenen: teken een blad
 
 Nu we kunnen rekenen met parameters, kunnen we ook interessantere teken-functies maken.
 We geven hier een voorbeeld van een functie om een blad te tekenen:
