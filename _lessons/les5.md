@@ -5,7 +5,7 @@ date: 18-jan-2015
 layout: lesson
 ---
     
-## Programmeren in JavaScript - Les 5
+## Programmeren in JavaScript - Les 5: IF
 
 Dit is de vijfde les in Programmeren in Javascript.
 Naast deze tutorials is er een uitleg via XXX.
@@ -15,7 +15,7 @@ Ga nu naar de volgende pagina.
 
 ## Keuze: if ... else
 
-In deze les maken we kennis met de keuze-opdracht: het `if`-statement", ofwel de *conditionele opdracht*. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
+In deze les maken we kennis met de keuze-opdracht: het `if`-statement, ofwel de *conditionele opdracht*. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
 
 ```js
   if (cond) {
@@ -25,9 +25,8 @@ In deze les maken we kennis met de keuze-opdracht: het `if`-statement", ofwel de
   }
 ```
 
-Hierin is `cond` een conditie die als resultaat `true` (waar) of `false` (onwaar) heeft. Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt opdracht `command2;` uitgevoerd.
+Hierin is de conditie `cond` een expressie die als resultaat `true` (waar) of `false` (onwaar) heeft. Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt opdracht `command2;` uitgevoerd.
 
-Er is ook een verkorte vorm, zonder `else`-deel. In dat geval wordt als de conditie `false` is, de *lege opdracht* uitgevoerd. Deze "doet niets": er verandert niets aan de toestand.
 
 ---
 
@@ -49,6 +48,26 @@ Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijki
 * PM
 * PM      
 
+## IF: verkorte vorm
+
+Als er in het `else`-deel geen opdracht uitgevoerd hoeft te worden, dan kunnen we dit afkorten door het `else`-deel weg te laten. Met andere woorden:
+
+```js
+if (cond) {
+  command1;
+}
+```
+
+is een afkorting voor
+
+```js
+if (cond) {
+  command1;
+} else {
+  // no command
+}
+```
+
 
 ## Voorbeeld: trapje
 
@@ -65,7 +84,7 @@ function stairSide(n) {
 }
 ```
 
-We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar is door 2: n is even.
+We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar is door 2, ofwel: n is even.
 
 ---
 
@@ -297,5 +316,6 @@ function step(i) {
 
 *Opdrachten:*
 
-* PM
-* PM
+* Ga op papier na wat deze functie doet, door bijvoorbeeld een tekening te maken van `repeat(5, step)`.
+* Kopieer deze functie naar de "user defined functions", en roep deze aan vanuit `testB`. Test daarme deze functie.
+* Wat gebeurt er als je `i === 2` vervangt door `i === 3` (i deelbaar door 3)? Probeer dit eerst op papier uit, en test dit daarna in je programma.

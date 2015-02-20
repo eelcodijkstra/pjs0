@@ -6,7 +6,7 @@ layout: lesson
 ---
 
 
-## Programmeren in JavaScript - Les 8
+## Programmeren in JavaScript - Les 8: Objecten
 
 Dit is de achtste les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
 

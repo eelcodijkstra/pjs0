@@ -6,7 +6,7 @@ layout: lesson
 ---
 
 
-## Programmeren in JavaScript - Les 9
+## Programmeren in JavaScript - Les 9: Arrays
 
 Dit is de negende les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
 

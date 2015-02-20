@@ -5,7 +5,7 @@ title: Les 7
 layout: lesson
 ---
 
-## Programmeren in JavaScript - Les 7
+## Programmeren in JavaScript - Les 7: Strings
 
 Dit is de zevende les in Programmeren in Javascript.
 Naast deze tutorials is er een uitleg via XXX.

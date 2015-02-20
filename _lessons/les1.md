@@ -258,6 +258,24 @@ Een eenvoudig huisje ziet er als volgt uit:
 2. Als je eerste poging geen huisje oplevert, probeer dan uit te vinden welke extra opdrachten je nodig hebt om met je driehoek- en vierkant-functies een huisje te tekenen.
 3. Definieer een functie voor het tekenen van een huisje. Test deze met behulp van `testA`.
 
+## Tweehoek
+
+We hebben de voorbeelden van het vierkant en van de driehoek gezien. Hoe zou een "regelmatige tweehoek" er dan uit kunnen zien?
+
+* een regelmatige tweehoek heeft twee zijden van gelijke lengte;
+* een tweehoek is een gesloten figuur: begin en eindpunt sluiten op elkaar aan;
+* na het tekenen van de tweehoek moet de turtle weer op precies dezelfde plek staan, in dezelfde richting;
+* een regelatige tweehoek bestaat uit twee identieke opdrachten van de vorm `forward(size); right(angle)`. 
+    * welke waarde zou `angle` dan moeten hebben?
+    * voor het vierkant geldt: `4 * angle === 360`; voor de driehoek geldt: `3 * angle === 360`; dan ligt voor de tweehoek voor de hand: `2 * angle === 360`, met andere woorden: `angle === 180`.
+
+---
+
+*Opdrachten*
+
+1. Maak een functie `biangle(sz)`, voor het tekenen van een tweehoek met zijde `sz`. Test deze functie met `testA`.
+2. Breid `testA` uit met een draaiing van de turtle over (bijvoorbeeld) 15 graden. Welke figuur krijg je nu door herhaald klikken?
+
 ## Tips
 
 * je kunt de vorige opdracht in het console oproepen door het pijltje naar boven.
