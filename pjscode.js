@@ -1,5 +1,7 @@
 /*jslint browser: true, vars: true */
-/*global $: true, alert: true, displayState: true, testA: true, testB: true, testC: true,  */
+/*global $: true, alert: true, displayState: true, testA: true, testB: true, testC: true,
+  mouseDown: true,
+*/
 
 var logging = true;
 var logField = document.getElementById("logArea");
@@ -18,10 +20,12 @@ function alert(str) {
   window.parent.window.alert(str);
 }
 
-var ctx; // the global context for the used Canvas element
+var
+  canvas, // the global Canvas element
+  ctx;    // the global context for the used Canvas element
 
 function initCanvas() {
-  var canvas = document.getElementById("mycanvas");
+  canvas = document.getElementById("mycanvas");
   if (canvas.getContext) {
     ctx = canvas.getContext("2d");
   } else {
@@ -125,6 +129,14 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function getMousePos(canvas, evt) {
+  var rect = canvas.getBoundingClientRect();
+  return {
+    x: evt.clientX - rect.left,
+    y: evt.clientY - rect.top
+  };
+}
+
 $(document).ready(function () {
 
   $("#forwardButton").on("click", function () {
@@ -163,7 +175,7 @@ $(document).ready(function () {
   $("#hideLogButton").on("click", function () {
     var button =  $("#hideLogButton");
     var logElt = $("#logArea");
-    logging = !logging; 
+    logging = !logging;
     if (!logging) {
       button.html("Show Log");
       logElt.hide();
@@ -189,6 +201,11 @@ $(document).ready(function () {
     var arg1 = parseInt($("#testCArg1").val(), 10);
     testC(arg0, arg1);
     displayState();
+  });
+
+  $("#mycanvas").on('mousedown', function (evt) {
+    var mousePos = getMousePos(canvas, evt);
+    mouseDown(mousePos.x, mousePos.y);
   });
 
   function displayState() {
@@ -223,3 +240,6 @@ function testC(x, y) {
   alert("not yet defined");
 }
 
+function mouseDown(x, y) {
+  alert("not yet defined");
+}
