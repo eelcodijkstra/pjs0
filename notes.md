@@ -68,3 +68,11 @@ Voor de turtle hebben we enkele keuzes gemaakt die afwijken van wat elders gebru
 ## Opmerkingen bij de vormgeving (tutorial frame)
 
 * de margin aan de onderkant is 60px groot; dit kan beter 20px zijn. De marge aan de bovenkant is 60 px vanwegen het navigatie-deel.
+
+## Issues
+
+* hoe kun je als gebruiker de JSBin code resetten? (Als je op een of andere manier deze verziekt hebt.)
+    * een simpele browser-refresh lijkt niet te werken, door de caching die gebruikt wordt.
+    * gebruik van reload etc. werkt niet; of je hebt geen toegang tot een iframe-inhoud van een ander domein (cross domain); of een refresh (bijv. `iframe.src = iframe.src;`) gebruikt een cache-versie;
+    * openen van de oorspronkelijke pagina in een nieuw venster (werkt onder Chrome; controleren bij andere browsers.)
+    
