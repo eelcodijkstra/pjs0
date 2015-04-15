@@ -34,7 +34,7 @@ function initCanvas() {
 }
 
 // turtle graphics variables
-var down = true;        // pen down
+var down = true;         // pen down
 var dir = 0;             // current drawing direction (360 degrees? )
 var pos = {x: 0, y: 0};  // current position
 
