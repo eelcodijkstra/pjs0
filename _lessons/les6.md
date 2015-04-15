@@ -146,6 +146,7 @@ Het turtle-commando `forward` gaat uit van een relatieve beweging ten opzichte v
 
 
 ## Absolute en relatieve beweging
+
 De turtle-opdrachten uit de eerste lessen zijn relatief - ten opzichte van de huidige positie van de turtle. Dit betekent dat we eenvoudig een functie kunnen maken die een figuur tekent. Als we de turtle op een bepaalde positie zetten, met een bepaalde richting, wordt de figuur daar getekend.
 
 Door een toekenning aan de variabelen kunnen we de positie en de richting van de turtle absoluut zetten - bijvoorbeeld `pos = {x: 100, y:100};`, en `dir = 90;`. De nieuwe positie hangt nu niet af van de vorige positie. <br> Met dergelijke opdrachten kunnen we geen functies maken die een bepaalde figuur op verschillende plaatsen kan tekenen. <br> Een oplossing in dit geval is als we de positie en de richting van de turtle meegeven als parameter aan de functie.
@@ -158,6 +159,27 @@ Door een toekenning aan de variabelen kunnen we de positie en de richting van de
 *  PM
         
 
+## Objecten
+
+We zijn eerder de notaties `pos.x` en `pos.y` tegengekomen. Wat betekent deze notatie?
+
+`pos` is een *object*, met *properties* `x` en `y`. Een object kun je beschouwen als een samengestelde waarde die een verzameling variabelen bevat. De variabelen van een object noemen we de eigenschappen of properties van dat object.
+
+Dit betekent dat we `pos.x` als een variabele kunnen gebruiken. Het betekent ook dat we `pos` kunnen gebruiken als samengestelde waarde die zowel `pos.x` als `pos.y` bevat.
+
+De declaratie van `pos` ziet er als volg uit:
+
+```js
+var pos = {x: 0, y: 0};
+```
+
+In het hoofdstuk over objecten komen we hier uitgebreid op terug.
+
+---
+
+*Opdrachten:*
+
+1. Zoek via de JavaScript tab de declaratie van de variabele `pos`.
 
 
 
@@ -185,26 +207,3 @@ Bij de behandeling van functies komen we hier uitgebreider op terug.
 
 
 
-
-
-## Objecten
-
-We zijn eerder de notaties `pos.x` en `pos.y` tegengekomen. Hoe kunnen we deze begrijpen?
-
-`pos` is een *object*, met *properties* `x` en `y`. Een object kun je beschouwen als een samengestelde waarde die een verzameling variabelen bevat. De variabelen van een object noemen we de eigenschappen of properties van dat object.
-
-Dit betekent dat we `pos.x` als een variabele kunnen gebruiken. Het betekent ook dat we `pos` kunnen gebruiken als waarde die zowel `pos.x` als `pos.y` bevat.
-
-De declaratie van `pos` ziet er als volg uit:
-
-```js
-var pos = {x: 0, y: 0};
-```
-
-In het hoofdstuk over objecten komen we hier uitgebreid op terug.
-
----
-
-*Opdrachten:*
-
-1. Een variabele kan ook een functie-waarde bevatten. 
