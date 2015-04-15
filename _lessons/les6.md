@@ -50,8 +50,6 @@ variable = expression;
 
 Het teken `=` spreek je uit als *wordt* (becomes). <br> Deze opdracht (i) rekent eerst de expressie uit; en (ii) kent het resultaat van deze berekening toe aan de variabele.
 
-*Het gebruik van `=` voor toekenning kun je zien als een ontwerpfout in Javascript. Een asymmetrische notatie als `:=` of `<-` geeft de bedoeling duidelijker weer.*
-
 ---
 
 *Opdrachten - voer uit via het console:*
