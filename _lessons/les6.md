@@ -48,7 +48,10 @@ Een toekenning heeft de vorm:
 variable = expression; 
 ```
 
-Het teken `=` spreek je uit als *wordt* (becomes). <br> Deze opdracht (i) rekent eerst de expressie uit; en (ii) kent het resultaat van deze berekening toe aan de variabele.
+Het teken `=` spreek je uit als *wordt* (becomes). <br> Deze opdracht 
+
+1. rekent eerst de expressie uit; en 
+2. kent het resultaat van deze berekening toe aan de variabele.
 
 ---
 
