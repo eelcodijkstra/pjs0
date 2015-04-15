@@ -204,7 +204,7 @@ Bij de behandeling van functies komen we hier uitgebreider op terug.
 
 *Opdrachten:*
 
-1. Kopieer bovenstaand voorbeeld naar het console, en bekijk het resultaat. <br> Merk op dat door het gebruik van variabelen een expressie die er hetzelfde uitziet, afhankelijk van de toestand een ander resultaat kan opleveren.
+1. Kopieer bovenstaand voorbeeld regel voor regel naar de console, en bekijk het resultaat. <br> Merk op dat door het gebruik van variabelen een expressie die er hetzelfde uitziet, afhankelijk van de toestand een ander resultaat kan opleveren.
 
 
 
