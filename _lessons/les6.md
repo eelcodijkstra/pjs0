@@ -50,7 +50,7 @@ variable = expression;
 
 Het teken `=` spreek je uit als *wordt* (becomes). <br> Deze opdracht (i) rekent eerst de expressie uit; en (ii) kent het resultaat van deze berekening toe aan de variabele.
 
-*Het gebruik van `=` voor toekenning kun je zien als een ontwerpfout in Javascript - en in veel andere programmeertalen. Een notatie als `:=` of `<-` geeft de bedoeling duidelijker weer.*
+*Het gebruik van `=` voor toekenning kun je zien als een ontwerpfout in Javascript. Een asymmetrische notatie als `:=` of `<-` geeft de bedoeling duidelijker weer.*
 
 ---
 
@@ -84,10 +84,10 @@ De toekenning met de beginwaarde kun je weglaten. In dat geval is de waarde `und
 1. Vraag de waarde op van de variabele `xx` (voordat je deze declareert). Welke melding krijg je?
 2. Declareer de variabele `xx` d.m.v.: <br>`var xx = 25;`
 3. Vraag nogmaals de waarde van `xx` op.
-4. Declareer de variabele `yy` als: <br> `var yy;` <br> Wat krijg je nu als je de waarde opvraagt?
+4. Declareer de variabele `yy` als: <br> `var yy;` <br> Wat krijg je nu als je de waarde van `yy` opvraagt?
 
 
-## Update
+## Toekenning: update
 
 In een programma kom je vaak een toekenning tegen van de vorm: 
 
@@ -101,7 +101,7 @@ of
 z = z * 10 * y;
 ```
 
-Hoe moeten we deze vorm begrijpen?
+Hoe moet je deze vorm begrijpen?
 
 1. reken eerst de expressie rechts van de `=` uit; <br> als `x` de waarde `122` heeft, `x === 122`, dan is `x + 1` gelijk aan `123`
 2. ken dit resultaat toe aan de variabele. <br> Nu heeft `x` de waarde `123`. <br> Er geldt: `x === 123`
@@ -120,6 +120,8 @@ Dit noemen we ook wel een *update* van de variabele.
 
 ## Update: turtle
 
+We kunnen de turtle besturen met commando's als `right`, `penDown`, `forward`. Sommige van deze commando's kunnen we voor de Canvas-turtle, die het HTML Canvas gebruikt, eenvoudig uitwerken door het bijwerken van de toestands-variabelen van de turtle. In deze gevallen hoeven we niets te doen met het Canvas.
+
 ---
 
 *Opdrachten:*
@@ -129,8 +131,21 @@ Dit noemen we ook wel een *update* van de variabele.
 3. Bekijk via de JavaScript-tab de code voor de functies `right` en `penDown` en `penUp`. <br> Je krijgt deze code ook in het console-venster, door de naam van de functie op te geven - zonder haakjes en parameters.
 
 
-## Absolute en relatieve beweging
+## Tekenen op het Canvas
 
+Het turtle-commando `forward` kan een spoor op het Canvas achterlaten. Hiervoor hebben we  één  of meer Canvas-commando's nodig. Het is niet voldoende om alleen de toestandsvariabelen bij te werken.
+
+Het turtle-commando `forward` gaat uit van een relatieve beweging ten opzichte van de positie en richting van de turtle. Deze moeten we omzetten in Canvas-coördinaten: een rechthoeking coördinatenstelsel met de oorsprong (0,0) links boven. We gebruiken de functies `cos` en `sin` voor de afbeelding van de nieuwe (relatieve) turtle-positie naar absolute Canvas-coördinaten
+
+---
+
+*Opdrachten*
+
+1. Bekijk via de JavaScript-tab de code voor de functie `forward`. Ga na hoe de nieuwe turtle-positie afgebeeld wordt op Canvas-coördinaten.
+2. Zoek uit hoe de Canvas-opdrachten in deze code werken. Zie hiervoor [Canvas-API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) en [Canvas shapes](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes).
+
+
+## Absolute en relatieve beweging
 De turtle-opdrachten uit de eerste lessen zijn relatief - ten opzichte van de huidige positie van de turtle. Dit betekent dat we eenvoudig een functie kunnen maken die een figuur tekent. Als we de turtle op een bepaalde positie zetten, met een bepaalde richting, wordt de figuur daar getekend.
 
 Door een toekenning aan de variabelen kunnen we de positie en de richting van de turtle absoluut zetten - bijvoorbeeld `pos = {x: 100, y:100};`, en `dir = 90;`. De nieuwe positie hangt nu niet af van de vorige positie. <br> Met dergelijke opdrachten kunnen we geen functies maken die een bepaalde figuur op verschillende plaatsen kan tekenen. <br> Een oplossing in dit geval is als we de positie en de richting van de turtle meegeven als parameter aan de functie.
