@@ -15,7 +15,7 @@ Ga nu naar de volgende pagina.
     
 ## Tekstwaarden (strings)
 
-Een string is een reeks tekens: letters, cijfers, en andere tekens. Een stringwaarde in een programmatekst noemen we een *string literal*. 
+Een string is een reeks tekens: letters, cijfers, en andere tekens. Een letterlijk stringwaarde in een programmatekst noemen we een *string literal*. Deze schrijf je als een reeks tekens tussen een paar quotes.
 
 Enkele voorbeelden van string literals - hier toegekend aan variabelen:
       
@@ -23,6 +23,7 @@ Enkele voorbeelden van string literals - hier toegekend aan variabelen:
 var hi = "Hello World";
 var par = '<p>$tekst$</p>';
 var nr = "1234";
+var letterA = "A";
 var spatie = ' ';
 ```
 
@@ -33,8 +34,6 @@ Zoals je ziet is een enkel teken ook een string - van lengte 1.
 ---
 
 *Opdrachten:*
-
-Voer onderstaande opdrachten uit via het console.
 
 1. Voer de bovenstaande opdrachten één voor één uit via het console. Vraag de waarden van  deze variabelen op.
 2. Ga na dat het geen verschil uitmaakt of je enkele of dubbele aanhalingstekens gebruikt: wat is het resultaat van <br> `'aap' === "aap"`?
