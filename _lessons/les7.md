@@ -240,12 +240,14 @@ Opmerking: je kunt niet zomaar schrijven: `1234.toString()` Je moet de betreffen
 
 *Opdrachten:*
 
-1. Voer de bovenstaande opdrachten één voor één uit op het console.
+1. Voer deze opdrachten één voor één uit op het console.
 2. Wat gebeurt er als je `toString()` gebruikt voor andere waarden, bijvoorbeeld voor een functie, voor een string, voor een object als `pos`?
 3. Waarom zou je niet kunnen schrijven: `123.toString()`?
 
 
 ## Nog heel veel andere operaties...
 
-* reguliere expressies
-* 
+In volgende modules maken we kennis met  nog meer operaties op strings:
+
+* reguliere expressies: string matching, vervangen van deelstrings
+* converteren van en naar JSON string-vorm.
