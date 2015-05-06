@@ -1,7 +1,7 @@
 ---
 author: EJD
 title: Les 8
-date: 21-jan-2015
+date: 7-mei-2015
 layout: lesson
 ---
 
@@ -15,24 +15,25 @@ Ga nu naar de volgende pagina.
 
 ## Objecten
 
-Een object is een groep properties (eigenschappen). Een property heeft een naam en een bijbehorende waarde. <br> Je kunt een object-waarde noteren door de (naam: waarde)-paren op te sommen, tussen accolades:
+Een object is een verzameling properties (eigenschappen). Een property heeft een *naam* en een *waarde*. <br> Je kunt een object-waarde noteren door de (naam: waarde)-paren op te sommen tussen accolades:
 
 ```js
 var pos = {x: 0, y: 0};
+var turtle = {name: "Henk", dir: 90, down: true};
 ```
 
 Deze vorm heet een *object literal* of *initializer*. Via de naam kun je de waarde opvragen of veranderen. In beide gevallen gebruik je de vorm  `obj.p` voor property `p` van object `obj` .
 
 ```js
-  obj.p = "Hi there";  // toekenning
-  console.log(obj.p);  // gebruik
+  turtle.name = "Marie";  // toekenning
+  console.log(turtle.name);  // gebruik
 ```
 
 ---
 
 *Opdrachten (uitvoeren via het console):*
 
-1. Maak een object-variabele `leerling` aan met properties `naam` - geef deze een string-waarde; en `year` - geef deze een getal-waarde. <br> Laat de waarde hiervan zien op het console.
+1. Maak een object-variabele `leerling` aan met properties `naam` - geef deze een string-waarde; en `jaar` - geef deze een getal-waarde. <br> Laat de waarde hiervan zien op het console.
 2. Verander de waarde van één van deze properties, en laat het resultaat-object zien op het console.
 
 
@@ -55,6 +56,28 @@ Door het gebruik van dit aparte `Math`-object verwar je de namen voor deze funct
 3. Hoe zou de turtle-code beter gedefinieerd kunnen zijn, zodat de namen hiervoor niet met je eigen namen in de war komen?
 
 
+## Object als property-waarde
+
+Een property kan alle soorten JavaScript-waarden aannemen. In het bijzonder kan de waarde van een property ook weer een object zijn.
+
+```js
+var turtle = {name: "Henk", dir: 90, pos: {x: 0, y: 0}};
+console.log("x=" + turtle.pos.x);
+
+```
+
+We zullen later zien dat we ook arrays en functies kunnen gebruiken als waarden in een object.
+
+---
+
+*Opdrachten:*
+
+1. 
+2.
+
+
+
+
 ## Toevoegen van een property
 
 Je kunt in JavaScript een property toevoegen aan een object, door een toekenning.
@@ -70,8 +93,47 @@ turtle.pos = {x: 50, y: 100};
 
 1. Kopieer bovenstaand voorbeeld naar het console. Vraag de waarde van `turtle` op via het console.
 2. Voeg een property `color` toe (met een string-waarde). Vraag de waarde nogmaals op.
-3. Je kunt een property ook weer verwijderen, bijvoorbeeld via <br> `delete turtle.color`
+3. Je kunt een property ook weer verwijderen, met `delete turtle.color`
 
+
+## Verwijzing naar object: toekenning, gelijkheid
+
+Een variabele met een object als waarde bevat altijd een *verwijzing* naar dit object. Een toekenning van een object aan een variabele kopieert de verwijzing - niet de waarde zelf.
+
+Een gevolg is dat twee variabelen naar dezelfde waarde kunnen verwijzen (*aliasing*). Als je deze waarde verandert via de ene variabele, zie je deze verandering ook via de andere variabele. Voorbeeld:
+
+```js
+var objA = {name: "Hans", year: 2013};
+var objB = objA;
+objB.name = "Klaas";
+console.log(objA.name);  // levert "Klaas"
+```
+
+Dit geldt ook voor parameters en voor properties: deze verwijzen naar een object-waarde.
+
+---
+
+*Opdrachten*
+
+1. Kopieer bovenstaande regels één voor één naar het console, en vraag steeds de waarde van `objA` en `objB` op.
+2. Maak een tekening van deze objecten en van de toekenningen, om te laten zien welke verwijzingen veranderen. <br> Hint: voer het programma uit in pythontutor.com. Selecteer eerst JavaScript als taal.
+
+
+## Toekenning en gelijkheid
+
+Zoals we gezien hebben, kopieer je bij een toekenning van een object-waarde altijd de verwijzing naar het object, niet het object zelf.
+
+De test op gelijkheid tussen twee object-waarden is daarom een test op de verwijzing, niet op de inhoud van het object:
+
+```js
+var objA = {name: "Hans", year: 2013};
+var objB = objA;
+var objC = {name: "Hans", year: 2013};
+console.log(objA === objB); // levert true
+console.log(objA === objC); // levert false
+```
+
+(Hoe kun je de waarde van een object kopiëren?)
 
 ## DOM als object
 
@@ -143,3 +205,15 @@ objA["name"]
 1. a
 2. b
 3. c
+
+## Van object naar string - en omgekeerd
+
+Je kunt een object in de meeste gevallen niet zomaar afdrukken. Het resultaat van `obj.toString()` is `"[object Object]"`.
+
+Er is een andere mogelijkheid: het gebruik van JSON ("JavaScript Object Notation", zie [json.org](http://json.org)). Deze vorm wordt veel gebruikt voor het uitwisselen van data tussen programma's en computers.
+
+Je kunt een JavaScript-waarde `x` omzetten in JSON met behulp van `JSON.stringify(x)`.
+
+> Deze functie `stringify` heeft allerlei extra mogelijkheden die vooral van belang zijn bij complexe objecten. Zie [MDN-JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+
+Voor het omzetten van een JSON-string `str` in een JavaScript-waarde gebruik je: `JSON.parse(str)`.
