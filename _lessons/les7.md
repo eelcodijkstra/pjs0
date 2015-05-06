@@ -15,7 +15,7 @@ Ga nu naar de volgende pagina.
     
 ## Tekstwaarden (strings)
 
-Een string is een reeks tekens: letters, cijfers, en andere tekens. Een letterlijk stringwaarde in een programmatekst noemen we een *string literal*. Deze schrijf je als een reeks tekens tussen een paar aanhalingstekens (quotes).
+Een string is een reeks tekens: letters, cijfers, en andere tekens. Een letterlijke stringwaarde in een programma noemen we een *string literal*. Deze schrijf je als een reeks tekens tussen aanhalingstekens (quotes).
 
 Enkele voorbeelden van string literals:
       
@@ -62,14 +62,14 @@ hi + " " + hi
 
 1. Reken deze expressies uit via het console.
 2. Geef een aantal voorbeelden van concatenatie van strings; gebruik zowel string-variabelen als string-literals.
-3. Je kunt meerdere contatenaties in één expressie gebruiken. Hierbij kun je zowel variabelen als string-literals combineren.
+3. Geef een voorbeeld van het gebruik van meerdere concatenaties in één expressie. Combineer hierin variabelen en string-literals.
 
 
 ## Gebruik van strings: log
 
 Een *log* is een spoor van een proces waarmee we een deel van het proces kunnen reconstrueren. 
 
-We gebruiken hier de log voor *alle* uitgevoerde turtle-opdrachten. Bij een simpel proces kan dit nog. Meestal moet je veel selectiever zijn: computers zijn erg snel, en de log wordt dan veel te groot.
+We gebruiken hier de log voor *alle* uitgevoerde turtle-opdrachten. Bij een simpel proces kan dit nog. Meestal log je veel minder, om de log overzichtelijk te houden.
 
 Door een aanroep van de functie `log()` stuur je een stringwaarde naar deze turtle-log. Deze functie hebben we hier voor de turtle gedefinieerd.
 
@@ -163,13 +163,6 @@ str1 = "Voor een string " +
     "gebruik je \" of \' "
 str2 = "Hello\nWorld";
 ```
-
-
-## Zoeken naar een substring
-
-`indexOf` O.a.
-
-* vervangen van een substring
 
 ## Vergelijken van strings
 
