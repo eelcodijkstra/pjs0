@@ -22,7 +22,7 @@ var pos = {x: 0, y: 0};
 var turtle = {name: "Henk", dir: 90, down: true};
 ```
 
-Deze vorm heet een *object literal* of *initializer*. Via de naam kun je de waarde opvragen of veranderen. In beide gevallen gebruik je de vorm  `obj.p` voor property `p` van object `obj` .
+Deze vorm heet een *object literal* of *initializer*. Via de property-naam kun je de waarde opvragen of veranderen. In beide gevallen gebruik je de vorm  `obj.p` voor property `p` van object `obj` .
 
 ```js
   turtle.name = "Marie";  // toekenning
@@ -33,7 +33,7 @@ Deze vorm heet een *object literal* of *initializer*. Via de naam kun je de waar
 
 *Opdrachten (uitvoeren via het console):*
 
-1. Maak een object-variabele `leerling` aan met properties `naam` - geef deze een string-waarde; en `jaar` - geef deze een getal-waarde. <br> Laat de waarde hiervan zien op het console.
+1. Maak een object-variabele `leerling` aan met properties `naam` - geef deze een string-waarde; en `jaar` - geef deze een getal-waarde. Laat de waarde hiervan zien op het console.
 2. Verander de waarde van één van deze properties, en laat het resultaat-object zien op het console.
 
 
@@ -66,7 +66,7 @@ console.log("x=" + turtle.pos.x);
 
 ```
 
-We zullen later zien dat we ook arrays en functies kunnen gebruiken als waarden in een object.
+Je kunt ook arrays en functies gebruiken als waarden in een object. We hebben hiervan al een voorbeeld gezien: `Math.sin(x)` is een aanroep van `sin` als property van `Math`.
 
 ---
 
@@ -80,7 +80,7 @@ We zullen later zien dat we ook arrays en functies kunnen gebruiken als waarden 
 
 ## Toevoegen van een property
 
-Je kunt in JavaScript een property toevoegen aan een object, door een toekenning.
+Je kunt in JavaScript een property toevoegen aan een object, door een toekenning aan een nieuwe property-naam.
 
 ```js
 var turtle = {dir: 0, down: false};
@@ -93,7 +93,7 @@ turtle.pos = {x: 50, y: 100};
 
 1. Kopieer bovenstaand voorbeeld naar het console. Vraag de waarde van `turtle` op via het console.
 2. Voeg een property `color` toe (met een string-waarde). Vraag de waarde nogmaals op.
-3. Je kunt een property ook weer verwijderen, met `delete turtle.color`
+3. Je kunt een property ook weer verwijderen, met `delete turtle.color`. Vraag de waarde daarna nogmaals op.
 
 
 ## Verwijzing naar object: toekenning, gelijkheid
@@ -133,7 +133,24 @@ console.log(objA === objB); // levert true
 console.log(objA === objC); // levert false
 ```
 
-(Hoe kun je de waarde van een object kopiëren?)
+## Van object naar string - en omgekeerd
+
+Je kunt een object in de meeste gevallen niet zomaar afdrukken. Het resultaat van `obj.toString()` is `"[object Object]"`.
+
+Er is een andere mogelijkheid: het gebruik van JSON ("JavaScript Object Notation", zie [json.org](http://json.org)). Deze vorm wordt veel gebruikt voor het uitwisselen van data tussen programma's en computers.
+
+Je kunt een JavaScript-waarde `x` omzetten in JSON met behulp van `JSON.stringify(x)`.
+
+> Deze functie `stringify` heeft allerlei extra mogelijkheden die vooral van belang zijn bij complexe objecten. Zie [MDN-JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+
+Voor het omzetten van een JSON-string `str` in een JavaScript-waarde gebruik je: `JSON.parse(str)`.
+
+Voor eenvoudige objecten kun je een kopie van een object maken, door dit eerst in een string om te zetten:
+
+```js
+var copyX = JSON.parse(JSON.stringify(x));
+```
+
 
 ## DOM als object
 
@@ -161,32 +178,6 @@ b.innerHTML = "klik hier";
 3. Het element met daarin de test-buttons heeft als naam (id): `"div4"`. Verander de achtergrondkleur (`backgroundColor`)van de `style` van dit element. (Bijvoorbeeld: "lightYellow"). <br> Zoek op het web naar "CSS color names" om te vinden welke namen je kunt gebruiken.
 
 
-## Samengestelde objecten als waarde
-
-Een variabele met een samengestelde waarde, bevat altijd een *verwijzing* naar de eigenlijke waarde. Een toekenning van een samengestelde waarde aan een variabele kopieert de verwijzing - niet de waarde zelf.
-
-Twee variabelen kunnen naar dezelfde waarde verwijzen (*aliasing*). Als je deze waarde verandert via de ene variabele, zie je deze verandering ook via de andere variabele. Voorbeeld:
-
-```js
-var objA = {name: "Hans", year: 2013};
-var objB = objA;
-objB.name = "Klaas";
-```
-
----
-
-*Opdrachten:*
-
-1. Kopieer bovenstaande regels één voor één naar het console, en vraag steeds de waarde van `objA` en `objB` op.
-2. Maak een tekening van deze objecten en van de toekenningen, om te laten zien welke verwijzingen veranderen. <br> Hint: voer het onderstaande Python-programma uit in pythontutor.com:
-
-```js
-x = {'name': 'Klaas', 'year': 2014}
-y = x
-x['name'] = 'Hans'
-```
-
-
 ## String als property-name
 
 Een property-name is een string; deze hoeft niet aan de regels voor JavaScript-namen te voldoen.
@@ -206,14 +197,3 @@ objA["name"]
 2. b
 3. c
 
-## Van object naar string - en omgekeerd
-
-Je kunt een object in de meeste gevallen niet zomaar afdrukken. Het resultaat van `obj.toString()` is `"[object Object]"`.
-
-Er is een andere mogelijkheid: het gebruik van JSON ("JavaScript Object Notation", zie [json.org](http://json.org)). Deze vorm wordt veel gebruikt voor het uitwisselen van data tussen programma's en computers.
-
-Je kunt een JavaScript-waarde `x` omzetten in JSON met behulp van `JSON.stringify(x)`.
-
-> Deze functie `stringify` heeft allerlei extra mogelijkheden die vooral van belang zijn bij complexe objecten. Zie [MDN-JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
-
-Voor het omzetten van een JSON-string `str` in een JavaScript-waarde gebruik je: `JSON.parse(str)`.
