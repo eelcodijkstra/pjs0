@@ -25,7 +25,7 @@ var names = ["hans", "marie", "anna",
 
 De elementen van een array zijn genummerd vanaf 0. Het rangnummer in de rij noemen we de *index*. We selecteren een element in een array door *indicering*, bijvoorbeeld `primes[2]` of `names[0]`.
 
-De index-expressie, tussen de rechte haken, is een normale expressie; deze wordt tijdens uitvoering van het programma berekend. We kunnen dus ook vormen tegenkomen als `primes[i + 1]` of `names[f(j) * 2]`.
+De index-expressie, tussen de rechte haken, is een normale expressie; deze wordt tijdens uitvoering van het programma berekend. We kunnen dus ook vormen gebruiken als `primes[i + 1]` of `names[f(j) * 2]`.
 
 `a.length` geeft de lengte van array `a` . Het index-bereik van array `a` loopt van 0 tot en met `a.length-1` .
 
@@ -33,7 +33,7 @@ De index-expressie, tussen de rechte haken, is een normale expressie; deze wordt
 
 *Opdrachten (uitvoeren op het console):*
 
-* Kopieer bovenstaande regels naar het console. Vraag de waarde op van deze beide variabelen.
+* Kopieer bovenstaande opdrachten naar het console. Vraag de waarde op van de beide variabelen.
 * Vraag de lengte op van beide variabelen. Wat is de waarde van `primes[0]`?
 * Wat is de waarde van `primes[-1]`? En van `primes[6]`?
 
