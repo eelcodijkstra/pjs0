@@ -34,8 +34,8 @@ $.fn.tutorial = function(options){
     var current = 1;
     var navCode = '<nav class="tutorial-nav">' +
                   '<span class="buttons">' +
-                  '<button class="previous disabled" href="#">â—„</button>' +
-                  '<button class="next" href="#">â–º</button>' +
+                  '<button class="previous disabled" href="#"> &lt; </button>' +
+                  '<button class="next" href="#"> &gt; </button>' +
                   '</span>' +
                   '<span class="steps"><span class="current">1</span> / ' +
                   '<span class="max">1</span></span>' +
