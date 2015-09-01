@@ -8,7 +8,7 @@ layout: lesson
 
 ## Programmeren in JavaScript - Les 3: Rekenen
 
-Dit is de derde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
+Dit is de derde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg in het hoofdstuk [Rekenen met getallen](http://infvo.com/books/pjs-0/Chapter-4/rekenen-met-getallen.html).
 
 Ga nu naar de volgende pagina. 
     
@@ -33,9 +33,10 @@ Selecteer de tab "Console", en maak eventueel ruimte door de andere tabs te slui
 
 *Opdrachten:*
 
-1. Probeer een aantal uitdrukkingen van de vorm `a # b`, waarin `a` en `b` getallen zijn, en `#` een van de rekenkundige operatoren is: `+ - * /`, bijv. `3 * 12`.
-2. Probeer een aantal uitdrukkingen van de vorm `a # b $ c`, waarin `#` en `$` verschillende rekenkundige operatoren zijn, bijv. `2 + 3 * 4` <br> Wat kun je zeggen over de prioriteit (rekenvolgorde) van de operatoren?
-3. Door haakjes te gebruiken, kun je de volgorde in de berekening veranderen, bijvoorbeeld `(2 + 3) * 4`. Probeer dit uit.
+1. Reken uit: `3 * 4 + 5`. 
+2. Probeer een aantal expressies van de vorm `a # b`, waarin `a` en `b` getallen zijn, en `#` een van de rekenkundige operatoren is: `+ - * /`, bijv. `3 * 12`.
+3. Probeer een aantal expressies van de vorm `a # b $ c`, waarin `#` en `$` verschillende rekenkundige operatoren zijn, bijv. `2 + 3 * 4` <br> Wat kun je zeggen over de prioriteit (rekenvolgorde) van de operatoren?
+4. Door haakjes te gebruiken, kun je de volgorde in de berekening veranderen, bijvoorbeeld `(2 + 3) * 4`. Probeer dit uit.
         
       
 ## Rekenen met functies
@@ -69,13 +70,13 @@ De notatie `Math.naam` leggen we later uit.
 *Opdrachten:*
 
 1. Probeer de bovenstaande functies, via het console.
-2. Probeer voorbeelden van uitdrukkingen waarin je een functie gebruikt in combinatie met operatoren en een andere functie.
+2. Probeer voorbeelden van expressies waarin je een functie gebruikt in combinatie met operatoren en een andere functie. Voorbeeld: `Math.sin( Math.sqrt(4) * Math.PI / 4)`
 3. Ga na welke functies nog meer gedefinieerd zijn voor `Math`, en probeer enkele daarvan uit.
 
     
 ## Functies: definitie
 
-Met behulp van een functie kunnen we een samengestelde uitdrukking een naam geven, en van parameters voorzien. Met de opdracht `return` geven we de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
+Met behulp van een functie kunnen we een expressie een naam geven, en van parameters voorzien. Met de opdracht `return` geven we de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
 
 ```js
 function twice(a) {
