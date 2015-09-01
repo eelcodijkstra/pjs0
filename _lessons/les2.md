@@ -7,7 +7,7 @@ layout: lesson
 
 ## Programmeren in JavaScript - Les 2
 
-Dit is de tweede les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via het boek: [functies en parameters](http://infvo.com/books/pjs-0/Chapter%203/README.html).
+Dit is de tweede les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via het boek: [functies en parameters](http://infvo.com/books/pjs-0/Chapter-3/functies-en-parameters.html).
      
 
 Ga nu naar de volgende pagina. 
