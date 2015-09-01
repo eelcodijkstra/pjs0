@@ -135,7 +135,7 @@ De elementen van een array kunnen ook objecten zijn.
 Ook functies kunnen we gebruiken als elementen van een array.
 
 
-## *Gelijksoortige waarden?
+## Gelijksoortige waarden?
 
 In Javascript zijn variabelen niet getypeerd, alleen waarden. Dit betekent dat de waarden in een JavaScript array van verschillende types kunnen zijn. Voorbeeld:
      
