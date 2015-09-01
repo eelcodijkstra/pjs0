@@ -47,7 +47,7 @@ Je kunt in een expressie ook een functie gebruiken. Het gaat daarbij om functies
 functienaam(... parameters ...)
 ```
 
-Met het resultaat van een functies kunnen we direct verder rekenen in een expressie:
+Met het resultaat van een functies kun je direct verder rekenen in een expressie:
 
 ```js
 3 * sqr(4 + 2)
@@ -76,7 +76,7 @@ De notatie `Math.naam` leggen we later uit.
     
 ## Functies: definitie
 
-Met behulp van een functie kunnen we een expressie een naam geven, en van parameters voorzien. Met de opdracht `return` geven we de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
+Met behulp van een functie kun je een expressie een naam geven en van parameters voorzien. Met de opdracht `return` geef je de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
 
 ```js
 function twice(a) {
@@ -195,7 +195,7 @@ squareStep(10);
 *Opdrachten:*
 
 1. Maak een vergelijkbare functie `squareStep1(size)` om een kolom vierkanten te tekenen, dus onder elkaar.
-2. 
+
 
 
 ## Andere manieren (1)
@@ -208,8 +208,8 @@ Maar je kunt het ook anders doen. Probeer zelf een (of meer) andere manieren te 
 
 *Opdrachten:*
 
-1. PM
-2. PM
+1. Verzin één of meer manieren om een begrensd vlak te vullen met vierkanten.
+2. (Lastig) Verzin een manier om een onbegrensd vlak te vullen met vierkanten.
 
 
 ## Andere manieren (2)
@@ -222,11 +222,6 @@ Nog weer een andere manier is om het vlak van buiten naar binnen in te vullen. O
 
 ---
 
-*Opdrachten:*
-
-1. PM
-2. PM
-        
 
 ## Andere manieren (3)
 We hebben een functie `turnRight(size)` gedefinieerd om het tekenen
