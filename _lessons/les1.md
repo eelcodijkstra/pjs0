@@ -16,7 +16,7 @@ Met de knoppen onder dit venster kun je een andere les selecteren.
 
 ### Boek
 
-Naast deze tutorials is er een uitleg via het [boek](http://infvo.com/books/pjs-0/), hoofdstuk "[Elementaire opdrachten en opeenvolging](http://infvo.com/books/pjs-0/Chapter%202/README.html)".
+Naast deze tutorials is er een uitleg via het [boek](http://infvo.com/books/pjs-0/), hoofdstuk "[Elementaire opdrachten en opeenvolging](http://infvo.com/books/pjs-0/Chapter-2/elementaire-opdrachten.html)".
 
 ---
 
