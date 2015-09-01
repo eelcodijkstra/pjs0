@@ -55,6 +55,7 @@ names[1] = "maria";
 
 
 ## Uitbreiden en inkrimpen van arrays
+
 Je kunt een array in JavaScript naar behoefte uitbreiden of kleiner maken. Voor het toevoegen van een waarde `x` aan het eind van array `a` gebruik je `a.push(x)`
       
 ```js
@@ -115,6 +116,7 @@ var psquare = primes.map(function (p) {
 ```
 
 Met de functie `reduce` kun je alle elementen in een array samenvoegen tot een enkele waarde: bijvoorbeeld door de elementen op te tellen, of (voor een array van strings) door hiervan één string te maken.
+
 ---
 
 *Opdrachten:*
@@ -134,6 +136,7 @@ Ook functies kunnen we gebruiken als elementen van een array.
 
 
 ## *Gelijksoortige waarden?
+
 In Javascript zijn variabelen niet getypeerd, alleen waarden. Dit betekent dat de waarden in een JavaScript array van verschillende types kunnen zijn. Voorbeeld:
      
 ```js
