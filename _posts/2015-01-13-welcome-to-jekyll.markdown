@@ -8,5 +8,3 @@ Deze website bevat een interactieve cursus "inleiding programmeren in JavaScript
 
 * [Lessen]({{site.baseurl}}frame.html)
 * [Boek](http://infvo.com/books/pjs-0)
-en introduceert met achtergrondinformatie. Dit bevat een u
-
