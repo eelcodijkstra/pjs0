@@ -2,9 +2,8 @@
 title: Tutorial Programmeren in JavaScript-0
 email: eelcodijkstra@ictindewolken.nl
 description: > # this means to ignore newlines until "baseurl:"
-  Dit tutorial vormt een inleiding in het programmaren in JavaScript
-  Het is ontwikkeld voor ICT in de Wolken. Het is bedoeld om gebruikt
-  te worden in combinatie met het boek:
+  Dit tutorial vormt een inleiding in het programmaren in JavaScript.
+  Het is ontwikkeld voor ICT in de Wolken.
 baseurl: "/pjs0/" # the subpath of your site, e.g. /blog/
 
 url: "http://eelcodijkstra.github.io" # the base hostname & protocol for your site
