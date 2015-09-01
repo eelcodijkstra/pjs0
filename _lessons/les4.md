@@ -5,7 +5,7 @@ date: 16-jan-2015
 layout: lesson
 ---
     
-## Programmeren in JavaScript - Les 4
+## Programmeren in JavaScript - Les 4: herhaling
 
 Dit is de vierde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
 
@@ -13,6 +13,7 @@ Ga nu naar de volgende pagina.
 
 
 ## Herhaling
+
 In dit hoofdstuk maken we kennis met herhaling - en daarmee met de kracht van computers. We beginnen met een eenvoudige vorm van herhaling: we geven vooraf op hoe vaak een bepaalde actie uitgevoerd moet worden.
 
 Hiervoor maken we gebruik van de volgende functie:
@@ -20,19 +21,152 @@ Hiervoor maken we gebruik van de volgende functie:
 ```js
 function repeat(n, f)
 ```
-De functie `repeat` voert `n` maal de functie `f` uit. <br> Voorbeeld: `repeat(3, sq)` komt overeen met `sq(); sq(); sq();`
+De functie `repeat` voert `n` maal de functie `f` uit. <br> Voorbeeld: 
+
+```js
+repeat(3, sq);
+```
+
+komt overeen met 
+
+```js
+sq(); 
+sq(); 
+sq();
+```
 
 ---
 
 *Opdrachten:*
 
-1. Maak een test voor een herhaling van de functie `squareStep30`.
-2. Wat betekent `repeat(0, sq)`?
-3. Wat voor betekenis zou `repeat(-1, sq)` kunnen hebben?
+1. Wat betekent `repeat(0, sq)`?
+2. Welke betekenis zou `repeat(-1, sq)` kunnen hebben?
+
+## Vierkant met herhaling(1)
+
+We kunnen nu de functie voor het tekenen van een vierkant formuleren met herhaling:
+
+```js
+function edge40() {
+  forward(40);
+  right(90);  
+}
+
+function square40() {
+  repeat(4, edge40);
+}
+```
+
+We kunnen in dit geval nog geen algemene functie maken voor het tekenen van een vierkant. Later zullen we hiervoor verschillende oplossingen laten zien.
+
+---
+
+*Opdracht(en):*
+
+1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square40` aan `testA`.
+2. Maak op een vergelijkbare manier een stel functies om een driehoek met zijde 50 te tekenen.
+
+## Bloem met herhaling(1)
+
+```js
+function leaf(rad, deg) {
+  right(-deg);
+  turnRight(rad, 2 * deg);
+  right(180 - 2 * deg);
+  turnRight(rad, 2 * deg);
+  right(180 - deg);
+}
+
+function leafStep() {
+  leaf(30, 45);
+  right(45);
+}
+
+function flower() {
+  repeat(8, leafStep);
+}
+```
+
+---
+
+*Opdrachten*
+
+1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `flower` aan `testA`.
+2. Experimenteer met verschillende vormen van het blad (leaf).
+3. Experimenteer met verschillende waarden voor de draai van de turtle (in `leafStep`), in combinatie met het aantal stappen in de herhaling (in `flower`). Wat is het product van de hoek en het aantal stappen? Is dat toevallig?
+
+## Vierkant met herhaling(2)
+
+Voorkennis:
+
+* (lexicale) scope; nesting van functies
+* gebruik van globale namen; namen die niet lokaal gedefinieerd zijn.
+
+Als we de definitie van de functie `edge` binnen de definitie van de functie `square` schrijven, dan kunnen we de parameter `size` ook gebruiken voor `edge`.
+
+Hiermee kunnen we een algemene functie voor het tekenen van een vierkant formuleren:
+
+```js
+function square(size) {
+
+  function edge() {
+    forward(size);
+    right(90);
+  }
+
+  repeat(4, edge);
+}
+```
+
+--- 
+
+1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square` aan `testB`.
+2. Maak op een vergelijkbare manier een algemene functie om een driehoek te tekenen.
+
+## Regelmatige veelhoek(1)
+
+Als opstapje voor het tekenen van een regelmatige n-hoek (polygon), maken we eerst een functie voor het tekenen van een achthoek:
+
+```js
+function octagon(size) {
+
+  function edge() {
+    forward(size);
+    right(45);
+  }
+  
+  repeat(8, edge);
+}
+```
+
+---
+
+*Opdrachten:*
+
+1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square` aan `testB`.
+2. Wat is het product van de hoek in `edge`, en het aantal herhalingen? Is dat toevallig? Wat is deze hoek voor een regelmatige veelhoek met n zijden?
+3. Maak op een vergelijkbare manier een algemene functie om een zeshoek (hexagon) te tekenen.
+4. Maak een functie voor het tekenen van een regelmatige veelhoek: <br> `function polygon(n,  size)`, <br> waarbij `n` het aantal hoeken is (`n > 2`). en `size` de lengte van een zijde is.
+
+
+## Regelmatige veelhoek(2)
+
+```js
+function polygon(n, size) {
+
+  function edge() {
+    forward(size);
+    right(360 / n);
+  }
+  
+  repeat(n, edge);
+}
+```
 
 
 ## Herhaling met index
-Bij herhaling is het soms handig om te weten om de hoeveelste stap het gaat. Je kunt dit gebruiken als parameter van de opdracht.
+
+Bij herhaling is het soms handig om te weten om de hoeveelste stap het gaat. Je kunt dit gebruiken als parameter van de opdracht die herhaald moet worden
 
 De functie die je meegeeft aan `repeat` kun je voorzien van een parameter: deze geeft de stap in de herhaling aan.
 
@@ -40,12 +174,99 @@ De stappen zijn genummerd *vanaf 0*. <br> Voorbeeld: `repeat(3, fz);` resulteert
 
 Het is gebruikelijk om in de Informatica vanaf 0 te tellen: dit geeft minder fouten, en levert regelmatiger programma's op. Het is in het begin even wennen, later wil je niets anders...
 
+```js
+function sqStep(i) {
+  square(i * 10);
+}
+
+repeat(5, sqStep);
+
+```
 ---
 
 *Opdrachten:*
 
-1. Definieer een `function sqStep(i)`, die een vierkant tekent met een zijde `i * 10`
-2. Maak een test voor een herhaling van deze functie (bijv. 15 maal).
+1. Voer de functie `sqStep` in als "user-defined function". Koppel de aanroep van `repeat` aan `testB` (met de parameter als het aantal herhalingen).
+2. Breid de functie `sqStep` uit met een draai van de turtle.
+3. Maak een vergelijkbare opzet voor het tekenen van een aanta; driehoeken.
+
+## Nesting van vierkanten
+
+Een object (bijvoorbeeld een vierkant) is "genest" in een ander vierkant als het er helemaal binnen valt. Zo spreken we ook over de "nesting" van haakjes, of van functies.
+
+Bekijk de volgende functie:
+      
+```js
+function sqStep(n) {
+  square(n * 20);
+  right(-90);
+  forward(10);  // up
+  right(-90);
+  forward(10);  // left
+  right(180);   // original direction
+}
+```
+
+Wat gebeurt er als je deze functie een aantal malen uitvoert? Teken dit eerst met de hand.
+
+---
+
+*Opdrachten:*
+
+1. Voer deze functie in als "user defined function", en plaats `repeat(x, sqStep)` in `testB`. Test je voorspelling.
+2. Je kunt de verbinding tussen twee vierkanten onzichtbaar maken door de pen van de turtle tijdelijk omhoog te bewegen. Voeg de opdrachten hiervoor toe.
+3. Je kunt ook met een diagonale verbinding van het ene naar het andere vierkant volstaan. Beredeneer eerst (met een tekening) hoe dit kan.
+4. Pas het programma aan volgens je uitwerking van (3). *Hint:* werk eerst met een zichtbare verbinding; maak deze daarna pas onzichtbaar.
+
+
+## Vierkant met herhaling(3)
+
+We hoeven een dergelijke lokale functie niet altijd een naam te geven. We kunnen werken met anonieme functies. We krijgen dan bijvoorbeeld:
+
+```js
+function square(size) {
+  repeat(4, function () {
+    forward(size);
+    right(90);
+  });
+}
+
+```
+
+## Vierkant met herhaling(5)
+
+In de "fat arrow"-notatie van Ecmascript 6 (voorlopig alleen in Firefox):
+
+```js
+function polygon(size, n){
+  repeat(n, => {
+    forward(size); 
+    right(360 / n);
+  });
+}
+```
+
+
+## Vierkant met herhaling(5)
+
+We kunnen het nog bonter maken.
+
+```js
+function edge(length, angle) {
+  return function () {
+    forward(length);
+    right(angle);
+  };
+}
+
+function polygon(size, n) {
+  repeat(n, edge(size, 360 / n));
+}
+```
+
+...maar dat is voor dit stadium nog wat te hoog gegrepen...
+
+
 
     
 ## Anonieme functies als parameter

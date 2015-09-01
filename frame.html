@@ -12,12 +12,15 @@
   </head>
   <body>
     <div>
-      <h1 id="lesHeader" >Les 1</h1>
       <iframe id="tutorialFrame" src="lessons/les1.html" height="650" width="25%">
       </iframe>
+<!--
       <a class="jsbin-embed" id="xxxx"
-         href="http://jsbin.com/tiqufi/17/embed?output&height=650px&width=73%25&hello=true">Canvas 1</a>
+         href="http://jsbin.com/tiqufi/28/embed?output&height=650px&width=73%25&hello=true">Canvas 1</a>
       <script src="http://static.jsbin.com/js/embed.js"></script>
+-->
+    <iframe src="http://jsbin.com/lemove/3/embed?output" height="650" width="73%">
+    </iframe>
     </div>
     <div>
       <button id="les1Button">les 1</button>
@@ -30,15 +33,21 @@
       <button id="les8Button">les 8</button>
       <button id="les9Button">les 9</button>
       <button id="les10Button">les 10</button>
+      <a href="index.html" id="homeLink">Home</a>
     </div>
     <script>
+      var prevButton = document.getElementById("les1Button");
+      prevButton.style.backgroundColor = "lightblue";
 
       function makeHandler(nr) {
         return function() {
+          // alert("button: " + nr);
           var tFrame = document.getElementById("tutorialFrame");
-          var lesHeader = document.getElementById("lesHeader");
+          var myButton = document.getElementById("les" + nr + "Button");
           tFrame.src = "lessons/les" + nr + ".html";
-          lesHeader.innerHTML = "Les " + nr;
+          prevButton.style.backgroundColor = "";
+          myButton.style.backgroundColor = "lightblue";
+          prevButton = myButton;
         }
       }
 

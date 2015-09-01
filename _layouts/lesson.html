@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Tutorial 1</title>
     <!-- this stylesheet provides default styles for tutorials -->
-    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/tutorial.css" rel="stylesheet">
     <!-- these scripts turn your make into a tutorial -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+    <script src="{{ site.baseurl }}/scripts/tutorial.js"></script>
     <script>
       jQuery(document).ready(function($){
         $("h2").each(function() {$(this).add($(this).nextUntil("h2")).wrapAll("<section />")});

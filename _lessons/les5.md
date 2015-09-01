@@ -5,7 +5,7 @@ date: 18-jan-2015
 layout: lesson
 ---
     
-## Programmeren in JavaScript - Les 5
+## Programmeren in JavaScript - Les 5: IF
 
 Dit is de vijfde les in Programmeren in Javascript.
 Naast deze tutorials is er een uitleg via XXX.
@@ -15,7 +15,7 @@ Ga nu naar de volgende pagina.
 
 ## Keuze: if ... else
 
-In deze les maken we kennis met de keuze-opdracht: het "if-statement". We spreken ook wel over de conditionele opdracht. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
+In deze les maken we kennis met de keuze-opdracht: het `if`-statement, ofwel de *conditionele opdracht*. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
 
 ```js
   if (cond) {
@@ -25,15 +25,14 @@ In deze les maken we kennis met de keuze-opdracht: het "if-statement". We spreke
   }
 ```
 
-Hierin is `cond` een conditie die als resultaat `true` (waar) of `false` (onwaar) heeft. Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt opdracht `command2;` uitgevoerd.
+Hierin is de conditie `cond` een expressie die als resultaat `true` (waar) of `false` (onwaar) heeft. Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt opdracht `command2;` uitgevoerd.
 
-Er is ook een verkorte vorm, zonder `else`-deel. In dat geval wordt als de conditie `false` is, de *lege opdracht* uitgevoerd. Deze "doet niets": er verandert niets aan de toestand.
 
 ---
 
 *Opdrachten:*
 
-1. Let op de plaats van de accolades, spaties en regelovergangen. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
+1. Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
 
     
 ## Condities en vergelijkingen
@@ -48,6 +47,26 @@ Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijki
 
 * PM
 * PM      
+
+## IF: verkorte vorm
+
+Als er in het `else`-deel geen opdracht uitgevoerd hoeft te worden, dan kunnen we dit afkorten door het `else`-deel weg te laten. Met andere woorden:
+
+```js
+if (cond) {
+  command1;
+}
+```
+
+is een afkorting voor
+
+```js
+if (cond) {
+  command1;
+} else {
+  // no command
+}
+```
 
 
 ## Voorbeeld: trapje
@@ -65,7 +84,7 @@ function stairSide(n) {
 }
 ```
 
-We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar is door 2: n is even.
+We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar is door 2, ofwel: n is even.
 
 ---
 
@@ -79,10 +98,10 @@ We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar i
 
 Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
 
-*`a &lt;  b` &nbsp; - a kleiner dan b
-*`a &lt;= b` - a ten hoogste b
-*`a &gt;  b` &nbsp; - a groter dan b
-*`a &gt;= b` - a ten minste b
+* `a <  b` &nbsp; - a kleiner dan b
+* `a <= b` - a ten hoogste b
+* `a >  b` &nbsp; - a groter dan b
+* `a >= b` - a ten minste b
 
 ---
 
@@ -98,7 +117,7 @@ We willen soms het minimum of het maximum van twee of meer getallen bepalen. We 
       
 ```js
 function min(a, b) {
-  if (a &lt; b) {
+  if (a < b) {
     return a;
   } else {
     return b;
@@ -113,7 +132,7 @@ We zullen later zien dat we deze functie ook anders kunnen schrijven, als een *c
 *Opdrachten:*
 
 1. Kopieer deze functie naar het JS-deelvenster, en test deze functie met een aantal voorbeelden via het console.
-2. Maakt het uit of we `a &lt;= b` als conditie gebruiken, in plaats van `a &lt; b` ?
+2. Maakt het uit of we hier `a <= b` als conditie gebruiken, in plaats van `a < b` ?
 3. Schrijf een functie `max` die het maximum van twee getallen bepaalt.
         
   
@@ -131,7 +150,7 @@ Een slinger is een figuur die er als volgt uitziet:
 
 ## Voorbeeld: grensgevallen
 
-We gebruiken if-opdrachten vaak voor grensgevallen. Je kunt je voorstellen dat de turtle bij de "grens" van het Canvas (tekenvel) zich anders gaat gedragen. We geven eerst een voorbeeld waarbij de turtle "botst" en terugkaatst. Dit effect zien we alleen goed bij kleine verplaatsingen: een grote verplaatsing maken we dan met behulp van herhaling
+We gebruiken if-opdrachten vaak voor grensgevallen. Je kunt je voorstellen dat de turtle bij de "grens" van het Canvas (tekenvel) zich anders gaat gedragen. We geven eerst een voorbeeld waarbij de turtle "botst" en terugkaatst. Dit effect zien we alleen goed bij kleine verplaatsingen: een grote verplaatsing maken we dan met behulp van herhaling.
       
 ```js
 function fdStep() {
@@ -297,5 +316,6 @@ function step(i) {
 
 *Opdrachten:*
 
-* PM
-* PM
+* Ga op papier na wat deze functie doet, door bijvoorbeeld een tekening te maken van `repeat(5, step)`.
+* Kopieer deze functie naar de "user defined functions", en roep deze aan vanuit `testB`. Test daarme deze functie.
+* Wat gebeurt er als je `i === 2` vervangt door `i === 3` (i deelbaar door 3)? Probeer dit eerst op papier uit, en test dit daarna in je programma.

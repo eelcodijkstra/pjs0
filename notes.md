@@ -30,6 +30,8 @@ JSBin maakt gewoonlijk gebruik van JSLint of JSHint - je krijgt nette foutmeldin
 
 Heeft dit te maken met de jsbin-omgeving in een iframe? Hoe kun je die "sturen"? Kan dat van buiten?
 
+Zie de issues op GitHUb: de uitbreidingen voor de editor worden alleen geactiveerd voor de niet-embedded versie. We kunnen dit dus niet realiseren door ergens een variable een andere waarde te geven...
+
 ## Bij les 2
 
 * een functie zonder parameters kun je aan een knop koppelen.
@@ -55,6 +57,26 @@ Enkele principes bij het ontwikkelen van deze module:
 * gebruik voor definitie
 * concreet voor abstract
 
+### Begrijpen, parate kennis en opzoeken
+
+Bij het programmeren moet je in de eerste plaats begrijpen hoe de programmeertaal werkt, en hoe je deze gebruikt voor het construeren van programma's en voor het oplossen van problemen. In de tweede plaats moet je een deel van de programmeertaal als parate kennis hebben: niet alleen omdat het teveel tijd kost om steeds bepaalde dingen op te zoeken, maar ook omdat je bij het lezen van een programma anders over dingen heen kunt lezen. In de derde plaats moet je andere dingen kunnen opzoeken. Dit geldt in het bijzonder voor bibliotheekfuncties.
+
+#### Wat moet je paraat hebben?
+
+* de veel voorkomende constructies, reserved words, en operatoren. 
+
+Als je een naam tegenkomt die je niet kent, dan weet je dat je deze moet opzoeken. Als je een naam of teken (operator) tegenkomt waarvan je denkt dat je deze kent, zul je niet de neiging hebben om deze op te zoeken. (Denk bijvoorbeeld aan een +-teken.) Dit betekent dat je alle subtiele eigenschappen van die veel voorkomende constructies moet kennen.
+
+Voorbeeld: strings
+
+* je moet weten dat `+` voor string-concatenatie staat, en dat hierbij een type-conversie (verandering van waarde) kan plaatsvinden. 
+* je moet weten dat er allerlei functies zijn voor het zoeken in strings, splitsen e.d. Deze kun je opzoeken als je er behoefte aan hebt.
+** Als je in een programma een functie als `str.split` tegenkomt, dan kun je de betekenis daarvan opzoeken;
+** Als je behoefte hebt aan een bepaalde functionaliteit voor strings, dan kijk je eerst in de lijst van standaard-operaties op strings.
+
+#### Wat kun je opzoeken
+
+
 ### Opmerkingen bij Turtle-opdrachten
 
 Voor de turtle hebben we enkele keuzes gemaakt die afwijken van wat elders gebruikelijk is:
@@ -62,4 +84,15 @@ Voor de turtle hebben we enkele keuzes gemaakt die afwijken van wat elders gebru
 * de opdracht `turnRight` (of `circleRight`?) werkt anders dan de `circle` opdracht in Python-turtle:
     * `circleRight(r, -90)` geeft een draai naar links (in Python geef je dit aan met een negatieve straal: `t.circle(-r, 90)`. 
     * een gevolg van deze aanpak is dat de hoeken van `right` en `circleRight` bij elkaar opgeteld kunnen worden, om te bepalen wat de totale rotatie van de turtle is.
+    
+## Opmerkingen bij de vormgeving (tutorial frame)
+
+* de margin aan de onderkant is 60px groot; dit kan beter 20px zijn. De marge aan de bovenkant is 60 px vanwegen het navigatie-deel.
+
+## Issues
+
+* hoe kun je als gebruiker de JSBin code resetten? (Als je op een of andere manier deze verziekt hebt.)
+    * een simpele browser-refresh lijkt niet te werken, door de caching die gebruikt wordt.
+    * gebruik van reload etc. werkt niet; of je hebt geen toegang tot een iframe-inhoud van een ander domein (cross domain); of een refresh (bijv. `iframe.src = iframe.src;`) gebruikt een cache-versie;
+    * openen van de oorspronkelijke pagina in een nieuw venster (werkt onder Chrome; controleren bij andere browsers.)
     
