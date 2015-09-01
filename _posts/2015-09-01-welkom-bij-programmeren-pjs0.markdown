@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welkom bij programmeren in JavaScript"
-date:   2015-jan-16
+date:   2015-sep-01
 ---
 
 Deze website bevat een interactieve cursus "inleiding programmeren in JavaScript". Naast het interactieve deel: de lessen, is er ook een begeleidend boek. Dit bevat een uitgebreidere uitleg van de concepten die gebruikt worden.
