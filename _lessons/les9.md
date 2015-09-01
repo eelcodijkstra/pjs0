@@ -107,16 +107,20 @@ names.forEach(printName);
 Een tweede vorm van herhaling over alle elementen van een array `a`is `a.map()`. Deze geef je een functie mee die voor elk element van het array een nieuwe waarde uitrekent. Het resultaat is een nieuw array, met deze nieuw berekende waarden:
       
 ```js
+var psquare = primes.map(function (p) {
+  return p * p;
+});
 
+// psquare: [4, 9, 25, ...]
 ```
 
+Met de functie `reduce` kun je alle elementen in een array samenvoegen tot een enkele waarde: bijvoorbeeld door de elementen op te tellen, of (voor een array van strings) door hiervan één string te maken.
 ---
 
 *Opdrachten:*
 
-* a
-* b
-* c
+1. lees de beschrijving van `reduce` in de documentatie. Gebruik `reduce` voor het optellen van de priemgetallen,
+2. gebruik `reduce` voor het samenvoegen van de namen tot één string, met een komma en een spatie tussen elk tweetal namen.
 
 ## Arrays van arrays
 
