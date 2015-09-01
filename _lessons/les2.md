@@ -225,9 +225,5 @@ Gebruik namen met een duidelijke betekenis. Voor JavaScript maakt dit niet uit, 
       
 ---
 
-*Opdrachten:*
-      
-1. PM
-2. PM
         
   
