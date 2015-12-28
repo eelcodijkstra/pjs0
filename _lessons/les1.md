@@ -139,7 +139,7 @@ forward(50);
 turnRight(50, 90);
 ```
 
-We kunnen een functie ook koppelen aan een knop (button); een *click*  op die button zorgt dan voor een aanroep van die functie. 
+Je kunt een functie ook koppelen aan een knop (button); een *click*  op die button zorgt dan voor een aanroep van die functie. 
       
 ---
 
@@ -152,7 +152,7 @@ We kunnen een functie ook koppelen aan een knop (button); een *click*  op die bu
 
 ## Functies: definitie
 
-We gaan nu zelf een functie definiëren. We groeperen een reeks opdrachten met behulp van accolades, en geven deze groep een naam, bijv.:
+Je gaat nu zelf een functie definiëren. Groepeer hiervoor een reeks opdrachten met behulp van accolades, en geef deze groep een naam, bijv.:
 
 ```js
 function sqEdge50() {
@@ -177,7 +177,7 @@ Een aanroep van deze functie heeft de vorm: `sqEdge50();`
 
 ## Voorbeeld: rechthoek
 
-We kunnen de functie die we zojuist gedefinieerd hebben, gebruiken als stap voor het tekenen van een rechthoek:
+Je kunt de functie die je zojuist gedefinieerd hebt, gebruiken als stap voor het tekenen van een rechthoek:
 
 ```js
 function square50() {
