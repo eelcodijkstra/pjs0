@@ -1,7 +1,7 @@
 ---
 author: EJD
 title: Les 8
-date: 8-mei-2015
+date: 8-may-2015
 layout: lesson
 ---
 
