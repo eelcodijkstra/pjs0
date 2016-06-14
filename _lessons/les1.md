@@ -16,7 +16,7 @@ Met de knoppen onder dit venster kies je een andere les. Met de pijltjes hierbov
 
 ### Boek
 
-Naast deze tutorials is er een uitleg via het [boek]((https://eelcodijkstra.gitbooks.io/programmeren-0), hoofdstuk "[Elementaire opdrachten en opeenvolging](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-2/elementaire-opdrachten.html)".
+Naast deze tutorials is er een uitleg via het [boek](https://eelcodijkstra.gitbooks.io/programmeren-0), hoofdstuk "[Elementaire opdrachten en opeenvolging](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-2/elementaire-opdrachten.html)".
 
 ---
 
