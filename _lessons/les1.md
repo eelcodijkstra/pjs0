@@ -195,7 +195,7 @@ function square50() {
 1. Voeg de functie-definitie van `square50` toe aan de *user-defined functions* in het JavaScript-venster, na de definitie van `sqEdge50`. 
 2. Zoek de functie `testC`. Verander de body tussen `{...}` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
 3. Breid de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
-4. Maak een figuur door een aantal malen op de button `testC();` te klikken.
+4. Maak een figuur door een aantal malen op de button `testC();` te klikken. Hoe vaak moet je klikken om helemaal rond te komen?
 
 ## Voorbeeld: driehoek
 
