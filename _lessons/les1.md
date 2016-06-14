@@ -236,12 +236,16 @@ function triangle50() {
 }
 ```
 
+Een volgende stap is het maken van een regelmatige 5-hoek.
+
+Probeer het patroon te herkennen voor het tekenen van een regelmatige n-hoek. Later zullen we hiervoor een functie maken.
+
 ---
 
 *Opdracht(en):*
 
-1. probeer op eenzelfde manier een 5-hoek te maken.
-2. hoe ziet het algemene patroon voor een n-hoek eruit? (Later zullen we daarvoor een functie maken.)
+1. maak op eenzelfde manier een 5-hoek. Over welke hoek moet de turtle in dat geval draaien?
+2. over welke hoek moet de turtle draaien voor elke zijde van een regelmatige n-hoek?
 
 ## Opdracht: huisje
 
