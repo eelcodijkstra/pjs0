@@ -10,7 +10,7 @@ layout: lesson
 
 Dit is het eerste tutorial om te leren programmeren met JavaScript. 
 
-Met de knoppen onder dit venster kun je een andere les selecteren.
+Met de knoppen onder dit venster kun je een andere les selecteren. Met de (blauwe) pijltjes hierboven ga je naar een volgende of vorige pagina in dezelfde les.
 
 ---
 
