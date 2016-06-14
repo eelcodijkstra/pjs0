@@ -44,7 +44,7 @@ function sqEdge(size) {
 
 1. Kopieer deze definitie naar het JavaScript-venster, in het deel voor de *user-defined functions*.
 2. Test deze function, door deze aan te roepen vanaf het Console. Gebruik verschillende waarden voor de parameter `size`.
-3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep `sqEdge(40);`
+3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep: `sqEdge(40);`
 4. Teken met deze button een vierkant.
 
 ## Voorbeeld: vierkant
@@ -66,31 +66,9 @@ function square(size) {
 
 1. Kopieer deze functie naar het *user-defined functions*-deel.
 2. Test deze functie, door deze vanuit het Console aan te roepen met verschillende waarden voor de parameter `size`.
-3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep `square(40);`. 
+3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep: `square(40);` 
 4. Verander de testfunctie, door na het tekenen van het vierkant de turtle 15 graden te laten draaien. Teken met deze button een fraaie figuur.
 
-## Voorbeeld: vierkant
-
-Door een parameter voor de lengte van een zijde toe te voegen, maken we een algemene functie voor het tekenen van een vierkant:
-      
-```js
-function square(size) {
-  forward(size); right(90);
-  forward(size); right(90);
-  forward(size); right(90);
-  forward(size); right(90);
-}
-```
-
-We schrijven de naam van de parameter tussen de haakjes, na de naam van de functie.
-
-In de body voor de functie gebruiken we deze naam: deze staat dan voor de waarde die bij de aanroep meegegeven wordt.
-
----
-
-*Opdrachten:*
-
-1. Kopieer deze functie-definitie naar het JavaScript-venster, in het gedeelte voor user-defined functions.<br> Maak een test-aanroep voor deze functie gekoppeld aan een knop (bijv. via functie `testB`).
 
 
 ## Voorbeeld: driehoek
