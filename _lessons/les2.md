@@ -49,7 +49,7 @@ function sqEdge(size) {
 
 ## Voorbeeld: vierkant
 
-Met deze stap kunnen we een vierkant tekenen, van willekeurige grootte:
+Met deze stap kunnen we een vierkant tekenen van willekeurige grootte:
 
 ```js
 function square(size) {
@@ -94,9 +94,8 @@ Later zullen we dit generaliseren tot regelmatige n-hoeken.
 
 *Opdrachten:*
 
-1. Kopieer deze functie naar het JavaScript-venster, en maak een test voor deze functie (gekoppeld aan één van de knoppen).
-2. Vraag: waarom hebben we de laatste opdracht `right(120);` toegevoegd? Ook zonder die opdracht wordt er toch een driehoek getekend?
-3. Voeg aan de testfunctie nog een extra rotatie toe, bijvoorbeeld `right(30);`
+1. Kopieer deze functies naar het JavaScript-venster, en maak een test voor de functie `triangle` (gekoppeld aan één van de knoppen).
+2. Voeg aan de testfunctie nog een extra rotatie toe, bijvoorbeeld `right(30);`
 
 
 ## Voorbeeld: huisje
@@ -124,15 +123,39 @@ Als je deze functie uitvoert, krijg je niet het gebruikelijke huisje te zien. Ho
 
 ## Functies met meerdere parameters
 
-Als we de stap voor het tekenen van een zijde algemeen willen maken, zodat we deze kunnen gebruiken voor een vierkant en voor een driehoek, dan  moeten we twee parameters gebruiken:
-
-* de eerste parameter, `size`, geeft de grootte van de zijde aan;
-* de tweede parameter, `n`, geeft het aantal graden aan dat de turtle draait.
+De functies `sqEdge` en `triEdge` lijken erg veel op elkaar:
 
 ```js
-function edge(size, n) {
+function triEdge(size) {
   forward(size);
-  right(n);
+  right(120);
+}
+
+function triEdge(size) {
+  forward(size);
+  right(120);
+}
+```
+
+We kunnen een *generalisatie* van deze functies maken, door een tweede parameter in te voeren, voor de hoek waarover de turtle draait.
+
+---
+
+*Opdrachten*:
+
+1. Bedenk zelf hoe je de functie `edge(size, angle)` kunt definiëren. 
+
+## Een gegeneraliseerde `edge`-functie.
+
+De gegeneraliseerde functie voor het tekenen van een kant definiëren we als volgt:
+
+* de eerste parameter, `size`, geeft de grootte van de zijde aan;
+* de tweede parameter, `angle`, geeft de hoek (het aantal graden) aan waarmee de turtle naar rechts draait.
+
+```js
+function edge(size, angle) {
+  forward(size);
+  right(angle);
 }
 ```
 
@@ -142,7 +165,7 @@ function edge(size, n) {
 
 1. Kopieer deze functie naar het *user-defined functions* deel.
 2. Test deze functie, door deze met verschillende waarden voor de parameter aan te roepen vanaf het Console.
-2. Koppel deze functie aan een button. Wat voor figuren krijg je bij de verschillende waarden voor de parameter `n` (het aantal graden)?
+2. Koppel deze functie aan een button. Wat voor figuren krijg je bij de verschillende waarden voor de parameter `angle` (het aantal graden)?
 3. Wat voor figuren krijg je als `n` een deler is van 360?
 4. Wat voor figuren krijg je als `n` niet een deler is van 360? (bijv.: 100?)
 
