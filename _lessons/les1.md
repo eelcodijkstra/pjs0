@@ -10,13 +10,13 @@ layout: lesson
 
 Dit is het eerste tutorial om te leren programmeren met JavaScript. 
 
-Met de knoppen onder dit venster kun je een andere les selecteren. Met de (blauwe) pijltjes hierboven ga je naar een volgende of vorige pagina in dezelfde les.
+Met de knoppen onder dit venster kies je een andere les. Met de pijltjes hierboven ga je naar een volgende of vorige pagina in deze les.
 
 ---
 
 ### Boek
 
-Naast deze tutorials is er een uitleg via het [boek](http://infvo.com/books/pjs-0/), hoofdstuk "[Elementaire opdrachten en opeenvolging](http://infvo.com/books/pjs-0/Chapter-2/elementaire-opdrachten.html)".
+Naast deze tutorials is er een uitleg via het [boek]((https://eelcodijkstra.gitbooks.io/programmeren-0), hoofdstuk "[Elementaire opdrachten en opeenvolging](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-2/elementaire-opdrachten.html)".
 
 ---
 
