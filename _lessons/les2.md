@@ -140,7 +140,7 @@ function edge(size, n) {
 
 *Opdrachten*:
 
-1. Kopieer deze functie naar het *user0defined functions* deel.
+1. Kopieer deze functie naar het *user-defined functions* deel.
 2. Test deze functie, door deze met verschillende waarden voor de parameter aan te roepen vanaf het Console.
 2. Koppel deze functie aan een button. Wat voor figuren krijg je bij de verschillende waarden voor de parameter `n` (het aantal graden)?
 3. Wat voor figuren krijg je als `n` een deler is van 360?
