@@ -139,13 +139,13 @@ function triEdge(size) {
 }
 ```
 
-We kunnen een *generalisatie* van deze functies maken, door een tweede parameter in te voeren, voor de hoek waarover de turtle draait.
+We kunnen een functie `edge(size, angle)` maken als *generalisatie* van deze functies: de tweede parameter (`angle`) is de hoek waarover de turtle draait. We scheiden de opeenvolgende parameters met een komma (`,`).
 
 ---
 
 *Opdrachten*:
 
-1. Bedenk zelf hoe je de functie `edge(size, angle)` kunt definiëren. 
+1. Bedenk zelf hoe je de functie `edge(size, angle)` kunt definiëren (voordat je naar de oplossing op de volgende pagina kijkt).
 
 ## Een gegeneraliseerde `edge`-functie.
 
@@ -167,14 +167,14 @@ function edge(size, angle) {
 
 1. Kopieer deze functie naar het *user-defined functions* deel.
 2. Test deze functie, door deze met verschillende waarden voor de parameter aan te roepen vanaf het Console.
-2. Koppel deze functie aan een button. Wat voor figuren krijg je bij de verschillende waarden voor de parameter `angle` (het aantal graden)?
-3. Verander de definitie van `square` en `triangle` door de functie `edge` te gebruiken.
-4. Wat voor figuren krijg je als `n` een deler is van 360?
-5. Wat voor figuren krijg je als `n` niet een deler is van 360? (bijv.: 100?)
+3. Verander de definitie (body) van `square` en `triangle` door de functie `edge` te gebruiken.
+4. Koppel deze functie aan een button. Wat voor figuren krijg je door herhaald klikken, bij de verschillende waarden voor de parameter `angle` (het aantal graden)?
+4. Wat voor figuren krijg je als `angle` een deler is van 360? (Dat wil zeggen: 360 / `angle` heeft rest 0.)
+5. Wat voor figuren krijg je als `angle` niet een deler is van 360? (bijv.: `angle` is 100?)
 
 ## Functies met meerdere parameters
 
-We hebben een turtle-opdracht met meerdere parameters:
+Een nieuwe turtle-opdracht is `turnRight`. Deze heeft meerdere parameters:
       
 ```js
 turnRight(rad, deg)
@@ -189,7 +189,6 @@ Een kortere straal betekent een scherpere bocht.
 
 Een negatief argument voor `deg` geeft een bocht naar links.
       
-
 De aanroep `turnRight(50, 360);` resulteert in een cirkel met een straal van 50.
 
 Deze opdracht is een voorbeeld van een functie met meerdere parameters. We scheiden de parameters door komma's. De volgorde van de parameters bij gebruik is dezelfde als bij de definitie.
