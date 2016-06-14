@@ -24,7 +24,7 @@ Naast deze tutorials is er een uitleg via het [boek](https://eelcodijkstra.gitbo
 
 Enkele tips voor het werken met JSBin:
 
-* Je kunt een deelvenster openen of sluiten door op de bijbehorende tab (bovenaan) te klikken;
+* Je opent of sluit een deelvenster door op de bijbehorende tab (bovenaan) te klikken;
 * Sluit JSBin-deelvensters die je niet gebruikt;
 * Als er niets gebeurt, controleer dan of "Auto-run JS" geselecteerd is (in het output-venster, bovenin of onderin).
 
