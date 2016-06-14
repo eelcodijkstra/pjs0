@@ -81,8 +81,8 @@ De plaats, de richting, en de pen-positie vormen samen de *toestand* of *state* 
 
 1. Kijk hoe de toestand verandert door de opdrachten die je met de knoppen geeft.
 2. Probeer de toestand te bereiken: `x: 150, y: 150, down: true`. Kun je deze toestand bereiken zonder een spoor achter te laten?
-3. Wat gebeurt er als je een negatief getal invoert als parameter voor `right`?
-4. Wat gebeurt er als je een negatief getal invoert als parameter voor `forward`?
+3. Wat gebeurt er als je een negatief getal invoert als parameter voor `forward`?
+4. Wat gebeurt er als je een negatief getal invoert als parameter voor `right`?
 
 
 ## JSBin
