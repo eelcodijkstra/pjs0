@@ -58,11 +58,11 @@ De knop *Clear canvas & log* maakt  het scherm schoon en zet de turtle in de beg
 
 ## Log van acties
 
-In het venster naast (of onder) het teken-canvas zie je de *log* van de acties die uitgevoerd zijn voor de tekening die je ziet. Deze reeks van acties vormen het *proces* waarvan de tekening het *resultaat* is.
+In het venster naast (of onder) het teken-canvas zie je de *log* van de acties die uitgevoerd zijn. Deze reeks acties is het *proces* waarvan de tekening het *resultaat* is.
 
 De knop voor het schoonvegen van het Canvas maakt ook deze log weer leeg.
 
-Probeer steeds te begrijpen hoe de opdrachten die je geeft, het proces dat daaruit volgt, en de resulterende tekening samenhangen.
+Probeer steeds de samenhang te begrijpen tussen de opdrachten die je geeft, het proces dat daaruit volgt, en de tekening.
 
 
 ## De toestand van de turtle
