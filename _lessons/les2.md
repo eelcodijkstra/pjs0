@@ -66,8 +66,9 @@ function square(size) {
 
 1. Kopieer deze functie naar het *user-defined functions*-deel.
 2. Test deze functie, door deze vanuit het Console aan te roepen met verschillende waarden voor de parameter `size`.
-3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep: `square(40);` 
-4. Verander de testfunctie, door na het tekenen van het vierkant de turtle 15 graden te laten draaien. Teken met deze button een fraaie figuur.
+3. Test deze functie, door deze te koppelen aan een knop (button). Gebruik de aanroep: `square(40);`
+4. In welke richting staat de turtle na het tekenen van een vierkant met deze functie?
+5. Verander de testfunctie, door na het tekenen van het vierkant de turtle 15 graden te laten draaien. Teken met deze button een fraaie figuur.
 
 
 
@@ -95,6 +96,7 @@ Later zullen we dit generaliseren tot regelmatige n-hoeken.
 *Opdrachten:*
 
 1. Kopieer deze functies naar het JavaScript-venster, en maak een test voor de functie `triangle` (gekoppeld aan één van de knoppen).
+2. In welke richting staat de turtle na het tekenen van een driehoek met deze functie?
 2. Voeg aan de testfunctie nog een extra rotatie toe, bijvoorbeeld `right(30);`
 
 
@@ -166,8 +168,9 @@ function edge(size, angle) {
 1. Kopieer deze functie naar het *user-defined functions* deel.
 2. Test deze functie, door deze met verschillende waarden voor de parameter aan te roepen vanaf het Console.
 2. Koppel deze functie aan een button. Wat voor figuren krijg je bij de verschillende waarden voor de parameter `angle` (het aantal graden)?
-3. Wat voor figuren krijg je als `n` een deler is van 360?
-4. Wat voor figuren krijg je als `n` niet een deler is van 360? (bijv.: 100?)
+3. Verander de definitie van `square` en `triangle` door de functie `edge` te gebruiken.
+4. Wat voor figuren krijg je als `n` een deler is van 360?
+5. Wat voor figuren krijg je als `n` niet een deler is van 360? (bijv.: 100?)
 
 ## Functies met meerdere parameters
 
