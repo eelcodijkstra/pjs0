@@ -139,7 +139,7 @@ function triEdge(size) {
 }
 ```
 
-We kunnen een functie `edge(size, angle)` maken als *generalisatie* van deze functies: de tweede parameter (`angle`) is de hoek waarover de turtle draait. We scheiden de opeenvolgende parameters met een komma (`,`).
+We kunnen een functie `edge(size, angle)` maken als *generalisatie* van deze functies: de tweede parameter (`angle`) is de hoek waarover de turtle draait. We scheiden de opeenvolgende parameters met een komma (`,`). De volgorde van de parameters bij aanroep (gebruik) is dezelfde als in de definitie.
 
 ---
 
@@ -172,26 +172,24 @@ function edge(size, angle) {
 4. Wat voor figuren krijg je als `angle` een deler is van 360? (Dat wil zeggen: 360 / `angle` heeft rest 0.)
 5. Wat voor figuren krijg je als `angle` niet een deler is van 360? (bijv.: `angle` is 100?)
 
-## Functies met meerdere parameters
+## Een functie met meerdere parameters: `turnRight`
 
-Een nieuwe turtle-opdracht is `turnRight`. Deze heeft meerdere parameters:
+Een nieuwe turtle-opdracht is `turnRight`. Deze heeft twee parameters:
       
 ```js
-turnRight(rad, deg)
+turnRight(rad, angle)
 ```
 
 Deze opdracht laat de turtle een bocht  maken:
 
 * met straal `rad` (zelfde maten als bij `forward`)
-* over `deg` graden (als bij `right`).
+* over `angle` graden (als bij `right`).
 
 Een kortere straal betekent een scherpere bocht.    
 
-Een negatief argument voor `deg` geeft een bocht naar links.
+Een negatief argument voor `angle` geeft een bocht naar links.
       
 De aanroep `turnRight(50, 360);` resulteert in een cirkel met een straal van 50.
-
-Deze opdracht is een voorbeeld van een functie met meerdere parameters. We scheiden de parameters door komma's. De volgorde van de parameters bij gebruik is dezelfde als bij de definitie.
 
 ---
 
@@ -204,14 +202,14 @@ Deze opdracht is een voorbeeld van een functie met meerdere parameters. We schei
 
 ## Functies met meerdere parameters
 
-We kunnen ook functies definiëren met meerdere parameters. De namen van deze parameters scheiden we dan door komma's, bijvoorbeeld:
+Voor het tekenen van een rechthoek met twee verschillende zijden kun je een functie definiëren met twee parameters: 
       
 ```js
 function rectangle(width, height) {
   ...
 }
 ```
-Zoals we eerder gezien hebben, geven we bij de aanroep de parameters weer in aan lijst gescheiden door haakjes:
+Bij de aanroep geven we de de parameters tussen haakjes, gescheiden foor komma's:
       
 ```js
 rectangle(60, 40);
@@ -223,6 +221,7 @@ rectangle(60, 40);
       
 1. Definieer een functie `rectangle` zoals hierboven beschreven, voor het tekenen van een rechthoek. Maak een test voor deze functie gekoppeld aan een knop (bijv. via `function testC()`).
 2. Waarom gebruiken we voor de draaiing een vaste waarde (90 graden)?
+3. Maak een functie voor het tekenen van een *parallellogram*. Hiervoor heb je een derde parameter nodig, waarmee je aangeeft hoe scheef het parallellogram is. (Waarom hoef je maar 1 hoek op te geven?)
         
     
 ## Namen voor parameters
