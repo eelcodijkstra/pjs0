@@ -7,7 +7,7 @@ layout: lesson
 
 ## Programmeren in JavaScript - Les 2
 
-Dit is de tweede les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via het boek: [functies en parameters](http://infvo.com/books/pjs-0/Chapter-3/functies-en-parameters.html).
+Dit is de tweede les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via het boek: [functies en parameters](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-3/functies-en-parameters.html).
      
 
 Ga nu naar de volgende pagina. 
@@ -15,15 +15,15 @@ Ga nu naar de volgende pagina.
      
 ## Functies met parameters
 
-We hebben gezien hoe je in een functie-definitie een aantal opdrachten kunt groeperen en een naam kunt geven.
+We hebben gezien hoe je in een functie-definitie een aantal opdrachten groepeert en een naam geeft.
 
 Nu gaan we een stap verder: we definiëren functies met parameters.
 
-We hebben steeds de functies `forward(n)` en `right(n)` gebruikt. De getallen die we tussen de haakjes geven: het aantal stappen vooruit, of het aantal graden draaien, zijn de parameters voor deze functies.
+We hebben steeds de functies `forward(n)` en `right(n)` gebruikt. De getallen die we tussen de haakjes geven: het aantal stappen vooruit, of het aantal graden draaien, zijn de *parameters* voor deze functies.
 
 Een functie zonder parameters voert altijd precies dezelfde opdrachten uit, met hetzelfde resultaat.
 
-Door parameters te gebruiken maak je een functie algemener bruikbaar. Je kunt de parameters zien als de *invoer* voor de functie.
+Door parameters maak je een functie algemener bruikbaar. Je kunt de parameters zien als de *invoer* voor de functie.
 
 ---
 
