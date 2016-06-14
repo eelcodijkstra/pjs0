@@ -73,13 +73,18 @@ function square(size) {
 
 ## Voorbeeld: driehoek
 
-Op eenzelfde manier als een vierkant, kunnen we ook een driehoek tekenen:
+Op eenzelfde manier als een vierkant, kunnen we ook een regelmatige driehoek ("driekant") tekenen:
 
 ```js
+function triEdge(size) {
+  forward(size);
+  right(120);
+}
+
 function triangle(size) {
-  forward(size); right(120);
-  forward(size); right(120);
-  forward(size); right(120);
+  triEdge(size);
+  triEdge(size);
+  triEdge(size);
 }
 ```
 
