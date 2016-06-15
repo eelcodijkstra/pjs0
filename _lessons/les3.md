@@ -15,39 +15,36 @@ Ga nu naar de volgende pagina.
 
     
 ## Rekenen met waarden
-Tot nu toe kunnen we alleen verschillende getallen invullen als parameter. De enige manier om 10 vierkanten te tekenen die steeds 10 stappen (pixels) groter zijn, is om alles uit te schrijven. Met computers moet dat slimmer kunnen.
+Tot nu toe gebruikten we alleen vaste getallen als parameter. Computers kunnen ook rekenen met getallen(!), bijvoorbeeld met een formule als  `size - 10`.
 
-We willen kunnen rekenen met waarden, zodat we bijvoorbeeld kunnen schrijven:
-`size - 10`.
-
-In JavaScript gebruiken we hiervoor *expressies* (uitdrukkingen).
+In JavaScript noemen we een dergelijke formule een *expressie* (uitdrukking). In een expressie gebruik je vaste getallen (`10`), benoemde waarden (zoals `size` - een parameterwaarde of een variabele), en operatoren (zoals `+` voor optellen of `*` voor vermenigvuldigen).
 
 ---
 
 
 ## Rekenen via het console
 
-Selecteer de tab "Console", en maak eventueel ruimte door de andere tabs te sluiten. <br> In de opdrachten moet je steeds een regel invoeren in het console. Denk erom dat je de regel afsluit met een return (anders kun je lang wachten).
+Selecteer de tab "Console", en sluit de andere tabs. <br> In de opdrachten moet je steeds een regel invoeren in het console. Denk erom dat je de regel afsluit met een return (anders kun je lang wachten).
       
 ---
 
 *Opdrachten:*
 
 1. Reken uit: `3 * 4 + 5`. 
-2. Probeer een aantal expressies van de vorm `a # b`, waarin `a` en `b` getallen zijn, en `#` een van de rekenkundige operatoren is: `+ - * /`, bijv. `3 * 12`.
-3. Probeer een aantal expressies van de vorm `a # b $ c`, waarin `#` en `$` verschillende rekenkundige operatoren zijn, bijv. `2 + 3 * 4` <br> Wat kun je zeggen over de prioriteit (rekenvolgorde) van de operatoren?
+2. Probeer een aantal expressies van de vorm `a # b`, waarin `a` en `b` getallen zijn, en `#` een van de rekenoperatoren is: `+ - * /`, bijv. `3 * 12`.
+3. Probeer een aantal expressies van de vorm `a # b $ c`, waarin `#` en `$` *verschillende* rekenoperatoren zijn, bijv. `2 + 3 * 4` <br> Wat kun je zeggen over de prioriteit (rekenvolgorde) van de operatoren?
 4. Door haakjes te gebruiken, kun je de volgorde in de berekening veranderen, bijvoorbeeld `(2 + 3) * 4`. Probeer dit uit.
         
       
 ## Rekenen met functies
 
-Je kunt in een expressie ook een functie gebruiken. Het gaat daarbij om functies die een waarde opleveren als resultaat. De aanroep van een functie heeft de vorm:
+Je kunt in een expressie ook een functie gebruiken. Dit moet een functie zijn met een resultaat. De aanroep van een functie heeft de vorm:
 
 ```js
 functienaam(... parameters ...)
 ```
 
-Met het resultaat van een functies kun je direct verder rekenen in een expressie:
+Met het resultaat van een functie kun je direct verder rekenen in een expressie:
 
 ```js
 3 * sqr(4 + 2)
@@ -69,14 +66,14 @@ De notatie `Math.naam` leggen we later uit.
 
 *Opdrachten:*
 
-1. Probeer de bovenstaande functies, via het console.
-2. Probeer voorbeelden van expressies waarin je een functie gebruikt in combinatie met operatoren en een andere functie. Voorbeeld: `Math.sin( Math.sqrt(4) * Math.PI / 4)`
+1. Probeer de bovenstaande functies via het console.
+2. Probeer voorbeelden van expressies waarin je een functie gebruikt samen met operatoren en een andere functie. Voorbeeld: `Math.sin( Math.sqrt(4) * Math.PI / 4)`
 3. Ga na welke functies nog meer gedefinieerd zijn voor `Math`, en probeer enkele daarvan uit.
 
     
 ## Functies: definitie
 
-Met behulp van een functie kun je een expressie een naam geven en van parameters voorzien. Met de opdracht `return` geef je de waarde aan die de functie als resultaat oplevert. Enkele voorbeelden:
+In een functiedefinitie geef je een expressie een naam en voorzie je deze van parameters. Met de opdracht `return` geef je de waarde aan die de functie als resultaat oplevert. Voorbeelden:
 
 ```js
 function twice(a) {
@@ -111,16 +108,16 @@ Nu we kunnen rekenen met parameters, kunnen we ook interessantere teken-functies
 We geven hier een voorbeeld van een functie om een blad te tekenen:
 
 ```js
-function leaf(rad, deg) {
-  right(-deg);
-  turnRight(rad, 2 * deg);
-  right(180 - 2 * deg);
-  turnRight(rad, 2 * deg);
-  right(180 - deg);
+function leaf(rad, angle) {
+  right(-angle);
+  turnRight(rad, 2 * angle);
+  right(180 - 2 * angle);
+  turnRight(rad, 2 * angle);
+  right(180 - angle);
 }
 ```
 
-Deze functie tekent een blad met kromming (straal) `rad`, en hoek (bij begin en eind) `deg`.
+Deze functie tekent een blad met kromming (straal) `rad`, en hoek (bij begin en eind) `angle`.
 
 Na afloop van het tekenen van het blad staat de turtle weer op dezelfde positie, in dezelfde richting als voorheen.
 
@@ -131,9 +128,9 @@ Na afloop van het tekenen van het blad staat de turtle weer op dezelfde positie,
 1. Kopieer deze functie naar het JavaScript-deel voor user-defined functions.
 2. Plaats de aanroep `leaf(x, y)`  in de button-functie `testC` . Probeer verschillende waarden voor de parameters van de button.
 3. Breid de body `testC` uit: na de aanroep van `leaf` laat je de turtle draaien, bijv. `right(30);` <br> Teken een bloem.
-4. Wat is de rol van de eerste opdracht, `right(-deg);` ?
-5. Wat is de rol van de middelste opdracht, `right(180 - 2 * deg);` ?
-6. Wat is de rol van de laatste opdracht, `right(180 - deg);` ?
+4. Wat is de rol van de eerste opdracht, `right(-angle);` ?
+5. Wat is de rol van de middelste opdracht, `right(180 - 2 * angle);` ?
+6. Wat is de rol van de laatste opdracht, `right(180 - angle);` ?
 
     
 ## Voorbeeld: bloem
@@ -141,8 +138,8 @@ Na afloop van het tekenen van het blad staat de turtle weer op dezelfde positie,
 Een functie-definitie voor het tekenen van een bloem kan er als volgt uitzien:
 
 ```js
-function leafStep(rad, deg) {
-  leaf(rad, deg);
+function leafStep(rad, angle) {
+  leaf(rad, angle);
   right(45);
 }
 
