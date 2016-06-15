@@ -15,9 +15,10 @@ Ga nu naar de volgende pagina.
 
     
 ## Rekenen met waarden
-Tot nu toe gebruikten we alleen vaste getallen als parameter. Computers kunnen ook rekenen met getallen(!), bijvoorbeeld met een formule als  `size - 10`.
+Tot nu toe gebruikten we alleen vaste getallen als parameter. Computers kunnen ook rekenen met getallen(!), bijvoorbeeld met een formule als <br>
+`size - 10`.
 
-In JavaScript noemen we een dergelijke formule een *expressie* (uitdrukking). In een expressie gebruik je vaste getallen (`10`), benoemde waarden (zoals `size` - een parameterwaarde of een variabele), en operatoren (zoals `+` voor optellen of `*` voor vermenigvuldigen).
+In JavaScript noemen we een dergelijke formule een *expressie* (uitdrukking). In een expressie gebruik je vaste getallen (`10`), benoemde waarden (zoals `size` - een parameter of een variabele), en operatoren (zoals `+` voor optellen of `*` voor vermenigvuldigen).
 
 ---
 
