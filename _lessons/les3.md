@@ -8,7 +8,7 @@ layout: lesson
 
 ## Programmeren in JavaScript - Les 3: Rekenen
 
-Dit is de derde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg in het hoofdstuk [Rekenen met getallen](http://infvo.com/books/pjs-0/Chapter-4/rekenen-met-getallen.html).
+Dit is de derde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg in het hoofdstuk [Rekenen met getallen](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-4/rekenen-met-getallen.html).
 
 Ga nu naar de volgende pagina. 
     
