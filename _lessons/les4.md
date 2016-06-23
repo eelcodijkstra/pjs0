@@ -133,6 +133,8 @@ function octagon(size) {
 
 ## Regelmatige veelhoek(2)
 
+Een functie voor het tekenen van een regelmatige veelhoek:
+
 ```js
 function polygon(n, size) {
 
@@ -145,14 +147,28 @@ function polygon(n, size) {
 }
 ```
 
+Dit is een generalisatie van de functies voor het tekenen van een vierkant, zeshoek, enzovoorts. We hebben de constanten (4 en 6) vervangen door een parameter.
 
-## Herhaling met index
+---
 
-Bij herhaling is het soms handig om te weten om de hoeveelste stap het gaat. Je kunt dit gebruiken als parameter van de opdracht die herhaald moet worden
+*Opdrachten:*
 
-De functie die je meegeeft aan `repeat` kun je voorzien van een parameter: deze geeft de stap in de herhaling aan.
+1. Gebruik deze functie voor het tekenen van een regelmatige zeshoek.
+2. Gebruik deze functie voor het tekenen van een regelmatige zestighoek.
+3. Wat is het resultaat als je het aantal hoeken heel erg groot wordt?
+4. Wat is het resultaat als 360 niet deelbaar is door het aantal hoeken dat je kiest? (Bijvoorbeeld: 7 of 11.) 
 
-De stappen zijn genummerd *vanaf 0*. <br> Voorbeeld: `repeat(3, fz);` resulteert in `fz(0); fz(1); fz(2); `
+## Herhaling met index (rangnummer)
+
+Bij herhaling gebruik je soms het rangnummer van de stap. Je kunt dit gebruiken als parameter van de opdracht die herhaald moet worden.
+
+We gebruiken hiervoor de `function repeatRange(n, f)`. De functie `f` krijgt hierin het rangnummer (de index) van de herhaling als parameter. Deze stappen zijn *genummerd vanaf 0*. `repeatRange(3, f);` komt dan overeen met:
+
+```js
+f(0);
+f(1);
+f(2);
+```
 
 Het is gebruikelijk om in de Informatica vanaf 0 te tellen: dit geeft minder fouten, en levert regelmatiger programma's op. Het is in het begin even wennen, later wil je niets anders...
 
@@ -168,13 +184,13 @@ repeat(5, sqStep);
 
 *Opdrachten:*
 
-1. Voer de functie `sqStep` in als "user-defined function". Koppel de aanroep van `repeat` aan `testB` (met de parameter als het aantal herhalingen).
+1. Voer de functie `sqStep` in als "user-defined function". Koppel de aanroep van `repeat` aan `testB`: gebruik als body van deze functie `repeat(x, sqStep);` 
 2. Breid de functie `sqStep` uit met een draai van de turtle.
-3. Maak een vergelijkbare opzet voor het tekenen van een aanta; driehoeken.
+3. Maak een vergelijkbare opzet voor het tekenen van een aantal driehoeken.
 
-## Nesting van vierkanten
+## Geneste vierkanten
 
-Een object (bijvoorbeeld een vierkant) is "genest" in een ander vierkant als het er helemaal binnen valt. Zo spreken we ook over de "nesting" van haakjes, of van functies.
+Een object (bijvoorbeeld een vierkant) is *genest* in een ander vierkant als het er helemaal binnen valt. Zo spreken we ook over de *nesting* van haakjes, of van functies.
 
 Bekijk de volgende functie:
       
@@ -199,56 +215,6 @@ Wat gebeurt er als je deze functie een aantal malen uitvoert? Teken dit eerst me
 2. Je kunt de verbinding tussen twee vierkanten onzichtbaar maken door de pen van de turtle tijdelijk omhoog te bewegen. Voeg de opdrachten hiervoor toe.
 3. Je kunt ook met een diagonale verbinding van het ene naar het andere vierkant volstaan. Beredeneer eerst (met een tekening) hoe dit kan.
 4. Pas het programma aan volgens je uitwerking van (3). *Hint:* werk eerst met een zichtbare verbinding; maak deze daarna pas onzichtbaar.
-
-
-## Vierkant met herhaling(3)
-
-We hoeven een dergelijke lokale functie niet altijd een naam te geven. We kunnen werken met anonieme functies. We krijgen dan bijvoorbeeld:
-
-```js
-function square(size) {
-  repeat(4, function () {
-    forward(size);
-    right(90);
-  });
-}
-
-```
-
-## Vierkant met herhaling(5)
-
-In de "fat arrow"-notatie van Ecmascript 6 (voorlopig alleen in Firefox):
-
-```js
-function polygon(size, n){
-  repeat(n, => {
-    forward(size); 
-    right(360 / n);
-  });
-}
-```
-
-
-## Vierkant met herhaling(5)
-
-We kunnen het nog bonter maken.
-
-```js
-function edge(length, angle) {
-  return function () {
-    forward(length);
-    right(angle);
-  };
-}
-
-function polygon(size, n) {
-  repeat(n, edge(size, 360 / n));
-}
-```
-
-...maar dat is voor dit stadium nog wat te hoog gegrepen...
-
-
 
     
 ## Anonieme functies als parameter
