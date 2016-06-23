@@ -7,7 +7,7 @@ layout: lesson
     
 ## Programmeren in JavaScript - Les 4: herhaling
 
-Dit is de vierde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via XXX.
+Dit is de vierde les in Programmeren in Javascript. Naast deze tutorials is er een uitleg via het [hoofdstuk Herhaling](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-5/herhaling.html) in het boek.
 
 Ga nu naar de volgende pagina.
 
@@ -57,54 +57,36 @@ function square40() {
 }
 ```
 
-We kunnen in dit geval nog geen algemene functie maken voor het tekenen van een vierkant. Later zullen we hiervoor verschillende oplossingen laten zien.
+We kunnen in dit geval nog geen functie maken voor het tekenen van een willekeurig vierkant. Later zullen we hiervoor verschillende oplossingen laten zien.
 
 ---
 
 *Opdracht(en):*
 
-1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square40` aan `testA`.
+1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square40` aan `testA`, door als body van `testA` te gebruiken: `square40();`.
 2. Maak op een vergelijkbare manier een stel functies om een driehoek met zijde 50 te tekenen.
-
-## Bloem met herhaling(1)
-
-```js
-function leaf(rad, deg) {
-  right(-deg);
-  turnRight(rad, 2 * deg);
-  right(180 - 2 * deg);
-  turnRight(rad, 2 * deg);
-  right(180 - deg);
-}
-
-function leafStep() {
-  leaf(30, 45);
-  right(45);
-}
-
-function flower() {
-  repeat(8, leafStep);
-}
-```
-
----
-
-*Opdrachten*
-
-1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `flower` aan `testA`.
-2. Experimenteer met verschillende vormen van het blad (leaf).
-3. Experimenteer met verschillende waarden voor de draai van de turtle (in `leafStep`), in combinatie met het aantal stappen in de herhaling (in `flower`). Wat is het product van de hoek en het aantal stappen? Is dat toevallig?
 
 ## Vierkant met herhaling(2)
 
-Voorkennis:
+We willen de functie `square40` *generaliseren*, voor het tekenen van een willekeurig vierkant. We doen dit door de *constante 40 te vervangen door een parameter* `size`. We krijgen dan een functie van de vorm:
 
-* (lexicale) scope; nesting van functies
-* gebruik van globale namen; namen die niet lokaal gedefinieerd zijn.
+```js
+function square(size) {
 
-Als we de definitie van de functie `edge` binnen de definitie van de functie `square` schrijven, dan kunnen we de parameter `size` ook gebruiken voor `edge`.
+  repeat(4, edge);
+}
+```
 
-Hiermee kunnen we een algemene functie voor het tekenen van een vierkant formuleren:
+De functie `edge` die we hierin herhalen moet gebruik maken van de parameter `size` van `square`. Dit kan niet in de vorm van een parameter van `edge`: de parameters van deze functie worden bepaald door `repeat`.
+
+We lossen dit op door de functie `edge` te declareren *binnen de functie `square`*. Zo'n lokale functie kan alle lokale namen van `square` gebruiken, inclusief de parameters.
+
+Zie ook het boek: XXX
+
+
+## Vierkant met herhaling(3)
+
+We definiëren de functie `edge` binnen de definitie van de functie `square`, om de parameter `size` te kunnen gebruiken. Hiermee formuleren we een functie voor het tekenen van een willekeurig vierkant:
 
 ```js
 function square(size) {
@@ -121,7 +103,7 @@ function square(size) {
 --- 
 
 1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square` aan `testB`.
-2. Maak op een vergelijkbare manier een algemene functie om een driehoek te tekenen.
+2. Maak op een vergelijkbare manier een algemene functie om een willekeurige regelmatige driehoek te tekenen.
 
 ## Regelmatige veelhoek(1)
 
@@ -379,7 +361,36 @@ In natuurkundige termen: de hoeksnelheid blijft gelijk, terwijl de snelheid toen
 3. Wat is het verschil tussen een hoek die een deler is van 360 graden (bijv. 30, 60, 90, 120), en een hoek die dat niet is (bijv. 100)?
 4. Teken een aantal mooie spiralen.
         
-    
+
+## Bloem met herhaling(1)
+
+```js
+function leaf(rad, deg) {
+  right(-deg);
+  turnRight(rad, 2 * deg);
+  right(180 - 2 * deg);
+  turnRight(rad, 2 * deg);
+  right(180 - deg);
+}
+
+function leafStep() {
+  leaf(30, 45);
+  right(45);
+}
+
+function flower() {
+  repeat(8, leafStep);
+}
+```
+
+---
+
+*Opdrachten*
+
+1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `flower` aan `testA`.
+2. Experimenteer met verschillende vormen van het blad (leaf).
+3. Experimenteer met verschillende waarden voor de draai van de turtle (in `leafStep`), in combinatie met het aantal stappen in de herhaling (in `flower`). Wat is het product van de hoek en het aantal stappen? Is dat toevallig?
+
 ## Geneste cirkels
 
 Gebruik de volgende functie:
