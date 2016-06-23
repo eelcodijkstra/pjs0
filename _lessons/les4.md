@@ -57,7 +57,7 @@ function square40() {
 }
 ```
 
-We kunnen in dit geval nog geen functie maken voor het tekenen van een willekeurig vierkant. Later zullen we hiervoor verschillende oplossingen laten zien.
+We kunnen op deze manier nog geen functie maken voor het tekenen van een willekeurig vierkant. Hier komen we later op terug.
 
 ---
 
@@ -77,7 +77,7 @@ function square(size) {
 }
 ```
 
-De functie `edge` die we hierin herhalen moet gebruik maken van de parameter `size` van `square`. Dit kan niet in de vorm van een parameter van `edge`: de parameters van deze functie worden bepaald door `repeat`.
+De functie `edge` die we hierin herhalen moet gebruik maken van de parameter `size` van `square`. Dit kan niet in de vorm van een parameter van `edge`: de functie `repeat` bepaalt de parameters van de herhaalde functie (namelijk `()`.
 
 We lossen dit op door de functie `edge` te declareren *binnen de functie `square`*. Zo'n lokale functie kan alle lokale namen van `square` gebruiken, inclusief de parameters.
 
@@ -128,10 +128,26 @@ function octagon(size) {
 1. Voer bovenstaande declaraties in als "user defined functions" in het JavaScript-deel. Koppel de functie `square` aan `testB`.
 2. Wat is het product van de hoek in `edge`, en het aantal herhalingen? Is dat toevallig? Wat is deze hoek voor een regelmatige veelhoek met n zijden?
 3. Maak op een vergelijkbare manier een algemene functie om een zeshoek (hexagon) te tekenen.
-4. Maak een functie voor het tekenen van een regelmatige veelhoek: <br> `function polygon(n,  size)`, <br> waarbij `n` het aantal hoeken is (`n > 2`). en `size` de lengte van een zijde is.
-
 
 ## Regelmatige veelhoek(2)
+
+Een vierkant met zijde `sz` heeft 4 hoeken, De hoeken zijn samen 360 graden (een volledige draai); elke hoek is 360 / 4 = 90 graden.
+
+Een achthoek met zijde `sz` heeft 8 hoeken. De hoeken zijn samen 360 graden; elke hoek is 360 / 8 = 45 graden.
+
+Wat is het algemene patroon van een (regelmatige) n-hoek? 
+
+* er zijn `n` hoeken en `n` zijden;
+* elke hoek is `360 /n` graden.
+
+---
+
+*Opdrachten:*
+
+1. Wat is de omtrek van een regelmatige veelhoek met `n` zijden van lengte `size`?
+2. Maak een functie voor het tekenen van een regelmatige veelhoek: <br> `function polygon(n,  size)`, <br> waarbij `n` het aantal hoeken is (`n > 2`), en `size` de lengte van een zijde is.
+
+## Regelmatige veelhoek(3)
 
 Een functie voor het tekenen van een regelmatige veelhoek:
 
@@ -234,40 +250,7 @@ Denk in dit geval om de afsluiting: `});`
 *Opdrachten:*
 
 1. Maak een test (bijv. `testB`) voor het voorbeeld hierboven.
-2. PM
-
-    
-## Veelhoeken
-
-We kunnen de herhaling gebruiken om op een gemakkelijke manier andere figuren te tekenen. We beginnen met veelhoeken.
-
-Een vierkant met zijde `sz` heeft 4 hoeken, en een omtrek van `4 * sz`. De hoeken zijn samen 360 graden; elke hoek is 360 / 4 = 90 graden.
-
-Een achthoek met zijde `sz` heeft 8 hoeken, en een omtrek van `8 * sz`. De hoeken zijn samen 360 graden; elke hoek is 360 / 8 = 45 graden.
-
-Wat is het algemene patroon van een (regelmatige) n-hoek? 
-
-1. de hoek is `360 /n` graden; 
-2. de zijde is `omtrek / n`.
-
----
-
-*Opdrachten:*
-      
-* (1) Maak een functie voor het tekenen van een achthoek met zijde `sz`:
-
-```js
-function octagon(sz) { ... }
-```
-        
-* (2) Maak een functie voor het tekenen van een veelhoek met `n` hoeken en met omtrek `c`.
-
-```js
-function polygon(n, c) { .... }
-```
-
-* (3) Wat is het resultaat als het aantal hoeken erg groot wordt?
-        
+2. PM  
     
 ## Een nest van vierkanten
 
