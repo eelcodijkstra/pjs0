@@ -169,10 +169,9 @@ Dit is een generalisatie van de functies voor het tekenen van een vierkant, zesh
 
 *Opdrachten:*
 
-1. Gebruik deze functie voor het tekenen van een regelmatige zeshoek.
-2. Gebruik deze functie voor het tekenen van een regelmatige zestighoek.
+1. Gebruik deze functie voor het tekenen van een regelmatige zeshoek met zijde 50. Wat is hiervan de omtrek?
+2. Gebruik deze functie voor het tekenen van een regelmatige zestighoek met een omtrek van 300.
 3. Wat is het resultaat als je het aantal hoeken heel erg groot wordt?
-4. Wat is het resultaat als 360 niet deelbaar is door het aantal hoeken dat je kiest? (Bijvoorbeeld: 7 of 11.) 
 
 ## Herhaling met index (rangnummer)
 
