@@ -10,13 +10,13 @@ layout: lesson
 
 Dit is het eerste tutorial om te leren programmeren met JavaScript. 
 
-Met de knoppen onder dit venster kun je een andere les selecteren.
+Met de knoppen onder dit venster kies je een andere les. Met de pijltjes hierboven ga je naar een volgende of vorige pagina in deze les.
 
 ---
 
 ### Boek
 
-Naast deze tutorials is er een uitleg via het [boek](http://infvo.com/books/pjs-0/), hoofdstuk "[Elementaire opdrachten en opeenvolging](http://infvo.com/books/pjs-0/Chapter-2/elementaire-opdrachten.html)".
+Naast deze tutorials is er een uitleg via het [boek](https://eelcodijkstra.gitbooks.io/programmeren-0), hoofdstuk "[Elementaire opdrachten en opeenvolging](https://eelcodijkstra.gitbooks.io/programmeren-0/content/Chapter-2/elementaire-opdrachten.html)".
 
 ---
 
@@ -24,7 +24,7 @@ Naast deze tutorials is er een uitleg via het [boek](http://infvo.com/books/pjs-
 
 Enkele tips voor het werken met JSBin:
 
-* Je kunt een deelvenster openen of sluiten door op de bijbehorende tab (bovenaan) te klikken;
+* Je opent of sluit een deelvenster door op de bijbehorende tab (bovenaan) te klikken;
 * Sluit JSBin-deelvensters die je niet gebruikt;
 * Als er niets gebeurt, controleer dan of "Auto-run JS" geselecteerd is (in het output-venster, bovenin of onderin).
 
@@ -58,11 +58,11 @@ De knop *Clear canvas & log* maakt  het scherm schoon en zet de turtle in de beg
 
 ## Log van acties
 
-In het venster naast (of onder) het teken-canvas zie je de *log* van de acties die uitgevoerd zijn voor de tekening die je ziet. Deze reeks van acties vormen het *proces* waarvan de tekening het *resultaat* is.
+In het venster naast (of onder) het teken-canvas zie je de *log* van de acties die uitgevoerd zijn. Deze reeks acties is het *proces* waarvan de tekening het *resultaat* is.
 
 De knop voor het schoonvegen van het Canvas maakt ook deze log weer leeg.
 
-Probeer steeds te begrijpen hoe de opdrachten die je geeft, het proces dat daaruit volgt, en de resulterende tekening samenhangen.
+Probeer steeds de samenhang te begrijpen tussen de opdrachten die je geeft, het proces dat daaruit volgt, en de tekening.
 
 
 ## De toestand van de turtle
@@ -81,8 +81,8 @@ De plaats, de richting, en de pen-positie vormen samen de *toestand* of *state* 
 
 1. Kijk hoe de toestand verandert door de opdrachten die je met de knoppen geeft.
 2. Probeer de toestand te bereiken: `x: 150, y: 150, down: true`. Kun je deze toestand bereiken zonder een spoor achter te laten?
-3. Wat gebeurt er als je een negatief getal invoert als parameter voor `right`?
-4. Wat gebeurt er als je een negatief getal invoert als parameter voor `forward`?
+3. Wat gebeurt er als je een negatief getal invoert als parameter voor `forward`?
+4. Wat gebeurt er als je een negatief getal invoert als parameter voor `right`?
 
 
 ## JSBin
@@ -195,7 +195,7 @@ function square50() {
 1. Voeg de functie-definitie van `square50` toe aan de *user-defined functions* in het JavaScript-venster, na de definitie van `sqEdge50`. 
 2. Zoek de functie `testC`. Verander de body tussen `{...}` zo dat deze de functie `square50` aanroept. Test of de button `testC();` nu doet wat je verwacht.
 3. Breid de body van `testC` uit zodat deze na het tekenen van het vierkant, de turtle 15 graden naar rechts laat draaien. Test dit met de button.
-4. Maak een figuur door een aantal malen op de button `testC();` te klikken.
+4. Maak een figuur door een aantal malen op de button `testC();` te klikken. Hoe vaak moet je klikken om helemaal rond te komen?
 
 ## Voorbeeld: driehoek
 
@@ -236,12 +236,16 @@ function triangle50() {
 }
 ```
 
+Een volgende stap is het maken van een regelmatige 5-hoek.
+
+Probeer het patroon te herkennen voor het tekenen van een regelmatige n-hoek. Later zullen we hiervoor een functie maken.
+
 ---
 
 *Opdracht(en):*
 
-1. probeer op eenzelfde manier een 5-hoek te maken.
-2. hoe ziet het algemene patroon voor een n-hoek eruit? (Later zullen we daarvoor een functie maken.)
+1. maak op eenzelfde manier een 5-hoek. Over welke hoek moet de turtle in dat geval draaien?
+2. over welke hoek moet de turtle draaien voor elke zijde van een regelmatige n-hoek?
 
 ## Opdracht: huisje
 
