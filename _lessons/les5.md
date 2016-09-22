@@ -27,19 +27,23 @@ In deze les maken we kennis met de keuze-opdracht: het `if`-statement, ofwel de 
 
 Hierin is de conditie `cond` een expressie die als resultaat `true` (waar) of `false` (onwaar) heeft. Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt opdracht `command2;` uitgevoerd.
 
+> De waarden `false` en `true` zijn waarden van het type Boolean (later meer hierover).
+
+Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
 
 ---
 
 *Opdrachten:*
 
-1. Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
+1. Zoek in het JavaScript-venster naar voorbeelden van `if`. 
+2. Wat is de rol van `if (down) {...}` die in de functie `forward`? (De verkorte vorm, zonder `else`, behandelen we later.)
 
     
 ## Condities en vergelijkingen
 
-Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkings-operatoren zijn "a gelijk aan b" - in JavaScript, `a === b`, en "a ongelijk aan b" , in JavaScript `a !== b`
+Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkingsoperatoren zijn "a gelijk aan b" - in JavaScript, `a === b`, en "a verschilt van b":  `a !== b`
 
-*Opmerking:* er zijn ook vergelijkingsoperatoren met een = minder: `a == b` en `a != b`. Deze kun je in het algemeen beter niet gebruiken.
+*Opmerking:* er zijn ook vergelijkingsoperatoren met een `=` minder: `a == b` en `a != b`. Deze kun je in het algemeen beter niet gebruiken.
 
 ---
 
