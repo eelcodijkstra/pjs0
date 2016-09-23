@@ -61,7 +61,12 @@ if (cond) {
     
 ## Condities en vergelijkingen
 
-Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkingsoperatoren zijn "a gelijk aan b" - in JavaScript, `a === b`, en "a verschilt van b":  `a !== b`
+Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkingsoperatoren in JavaScript zijn:
+
+| vergelijking   | betekenis |
+| :---           | :---      |
+| `a === b`      | `a` is gelijk aan `b` |
+| `a !== b`      | `a` verschilt van `b` |
 
 Deze vergelijkingen kun je voor (bijna) alle waarden gebruiken. Voor getallen heb je meer mogelijkheden:
 
