@@ -30,7 +30,7 @@ De conditie `cond` is een expressie met als resultaat `true` (waar) of `false` (
 
 `false` en `true` zijn waarden van het type `Boolean` (later meer hierover).
 
-Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken maak je minder fouten en is je code beter leesbaar.
+Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Gebruik deze vorm: je maakt minder fouten en je code is beter leesbaar.
 
 ---
 
@@ -63,7 +63,7 @@ if (cond) {
 
 Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkingsoperatoren zijn "a gelijk aan b" - in JavaScript, `a === b`, en "a verschilt van b":  `a !== b`
 
-*Opmerking:* er zijn ook vergelijkingsoperatoren met een `=` minder: `a == b` en `a != b`. Deze kun je in het algemeen beter niet gebruiken.
+Deze vergelijkingen kun je voor (bijna) alle waarden gebruiken. Voor getallen heb je meer mogelijkheden:
 
 | vergelijking | betekenis |
 | :---         | :---      |
@@ -84,7 +84,7 @@ Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijki
 We tekenen een trapje, met zijde 10, waarbij het aantal zijden gegeven is. De elementaire stap is dan niet een trede, maar een zijde ("halve trede"). De even zijden tekenen we horizontaal, de oneven verticaal. Bij een even stap in de herhaling gebruiken we een draai naar rechts, bij een oneven stap een draai naar links.
 
 ```js
-function stairSide(n) {
+function step(n) {
   forward(10);
   if (n % 2 === 0) {  // n is even
     right(90);
@@ -100,26 +100,20 @@ De conditie `n % 2 === 0` betekent: `n` deelbaar door 2, ofwel: `n` is even. De 
 
 *Opdrachten:*
 
-1. Kopieer deze functie naar het JS-deelvenster, en maak twee testfuncties (knoppen): voor bijvoorbeeld 7 en 8 zijden.
-2. Voer de test voor 7 zijden een aantal malen uit. Doe dit ook met de test voor 8 zijden. Wat zie je?
+1 Ga op papier na wat deze functie doet, door bijvoorbeeld een tekening te maken van `repeat(5, step)`.
+2. Kopieer deze functie naar het JS-deelvenster (onder "user defined functions"), en definieer `testB` als: `repeat(x, step);`. Test met verschillende waarden. 
 
 
-## Andere vergelijkingen
-
-Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
-
-* `a <  b` &nbsp; - a kleiner dan b
-* `a <= b` - a ten hoogste b
-* `a >  b` &nbsp; - a groter dan b
-* `a >= b` - a ten minste b
+## Een trapje (vervolg)
 
 ---
 
 *Opdrachten:*
 
-* PM
-* PM
-
+1. Herhaal de test met waarde 7 een aantal malen. Wat zie je?
+2. Idem, met waarde 8. Wat zie je?
+3. Wat gebeurt er als je `i === 2` vervangt door `i === 3` (i deelbaar door 3)? Probeer dit eerst op papier uit, en test dit daarna in je programma.
+4. Experimenteer met andere waarden voor de deler in de conditie, en andere waarden voor de herhaling.
     
 ## Voorbeeld: min
 
@@ -197,60 +191,9 @@ Het valt op dat de acties bij de x-grens links en rechts gelijk zijn. We zullen 
 * (2) Maar een andere functie `fdStep` die de turtle, als deze over een grens gaat, aan de andere kant weer laat verschijnen, in plaats van te laten botsen. <br> *Hint:* tel 200 op bij de positie, of trek er 200 vanaf.
 
 
-## FizzBuzz (1)
-Een bekende programmeer-opdracht is FizzBuzz. We maken hiervan een turtle-variant:
-
-
-1. doorloop alle getallen van 0 tot aan (en zonder) 50 - soms noteren we dit als `[0..]50`
-2. als het huidige getal `n` deelbaar is door 3, draai dan 90 naar rechts, en ga `n` stappen vooruit;
-3. als `n` deelbaar is door 5, draai dan 90 graden naar links, en ga `n` stappen vooruit;
-4. als `n` deelbaar is door 3 en door 5, voer dan beide stappen uit (in deze volgorde).
-
----
-
-*Opdrachten:*
-
-1. Probeer met de hand te schetsen wat het resultaat is voor de eerste 20 stappen.
-2. Wat is het resultaat voor `n` gelijk is aan 0?
-        
-
-## FizzBuzz (2)
-We geven hier de functie fizzBuzz
-      
-```js
-  function fizzBuzz(n) {
-    if ((n % 3) === 0) {
-      right(90);
-      forward(n);
-    }
-    if ((n % 5) === 0) {
-      left(90);
-      forward(n);
-    }
-  }
-```
-
-```js
-  function testB() {
-    forward(100);  // go to (100, 100)
-    right(90);
-    forward(100);
-    right(-90);
-    penDown();
-    repeat(50, fizzBuzz);
-    }
-```
-
----
-
-*Opdrachten:*
-
-* PM
-* PM
-
 ## Deling: rest en quotient
 
-Bij het delen van gehele getallen hebben we te maken met een rest na deling, en met een quotient.
+Bij het delen van gehele getallen hebben we te maken met een *rest* na deling en met een *quotient*.
 Voor de rest na deling heeft JavaScript de operator `%`.
       
 ```js
@@ -267,7 +210,7 @@ Voor het quotient is er geen operator, maar je kunt dit op de volgende manier be
 
 Een getal `n` is deelbaar door 3 als de rest na deling 0 is: `(n % 3) === 0`. (We gebruiken hier haakjes voor de duidelijkheid; deze zijn hier niet echt nodig.)
 
-Als de deler of het deeltal een negatief getal is, moet je altijd opletten wat de betekenis is. Deze is niet altijd "logisch".
+Als de deler of het deeltal een negatief getal is, moet je  opletten wat de betekenis is. Deze is niet altijd "logisch".
       
 ---
 
@@ -275,57 +218,3 @@ Als de deler of het deeltal een negatief getal is, moet je altijd opletten wat d
 
 * PM
 * PM
-        
-      
-    
-
-    
-## Conditionele actie
-Soms wil je dat een opdracht alleen uitgevoerd wordt als aan een bepaalde voorwaarde (condition) is voldaan. Hiervoor heeft JavaScript het *if-statement*:
-
-```js
-if (condition) {
-  ...command...;
-}
-```
-
-Je kunt ook een alternatieve opdracht aangeven voor het geval er niet aan de voorwaarde is voldaan:
-
-```js
-if (condition) {
-  ...command...;
-} else {
-  ...alternative command...;
-}
-```
-
----
-
-*Opdrachten:*
-
-* PM
-* PM
-
-
-## Een trapje
-
-We kunnen een trapje tekenen door afwisselend een horizontale en een verticale lijn te tekenen. Bij de even stappen maken we een draai naar rechts, bij de oneven stappen een draai naar links:
-      
-```js
-function step(i) {
-  forward(10);
-  if ((i % 2) === 0) {
-    right(90);
-  } else {
-    right(-90);
-  }
-}
-```
-
----
-
-*Opdrachten:*
-
-* Ga op papier na wat deze functie doet, door bijvoorbeeld een tekening te maken van `repeat(5, step)`.
-* Kopieer deze functie naar de "user defined functions", en roep deze aan vanuit `testB`. Test daarme deze functie.
-* Wat gebeurt er als je `i === 2` vervangt door `i === 3` (i deelbaar door 3)? Probeer dit eerst op papier uit, en test dit daarna in je programma.
