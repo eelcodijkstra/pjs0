@@ -8,6 +8,7 @@ layout: lesson
 ## Programmeren in JavaScript - Les 5: IF
 
 Dit is de vijfde les in Programmeren in Javascript.
+In deze les maken we kennis met de keuze-opdracht: het `if`-statement, ofwel de *conditionele opdracht*.
 Naast deze tutorials is er een uitleg via XXX.
 
 Ga nu naar de volgende pagina. 
@@ -15,7 +16,7 @@ Ga nu naar de volgende pagina.
 
 ## Keuze: if ... else
 
-In deze les maken we kennis met de keuze-opdracht: het `if`-statement, ofwel de *conditionele opdracht*. Dit gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
+Het `if`-statement (de *conditionele opdracht*) gebruiken we als er voor verschillende gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
 
 ```js
   if (cond) {
@@ -25,32 +26,18 @@ In deze les maken we kennis met de keuze-opdracht: het `if`-statement, ofwel de 
   }
 ```
 
-Hierin is de conditie `cond` een expressie die als resultaat `true` (waar) of `false` (onwaar) heeft. Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt opdracht `command2;` uitgevoerd.
+De conditie `cond` is een expressie met als resultaat `true` (waar) of `false` (onwaar). Als de conditie `true` is, wordt opdracht `command1;` uitgevoerd; als de conditie `false` is, wordt `command2;` uitgevoerd.
 
-> De waarden `false` en `true` zijn waarden van het type Boolean (later meer hierover).
+`false` en `true` zijn waarden van het type `Boolean` (later meer hierover).
 
-Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken, maak je minder fouten, en is je code beter leesbaar.
+Let op de plaats van de accolades, spaties en regelovergangen in het voorbeeld. Door deze vorm te gebruiken maak je minder fouten en is je code beter leesbaar.
 
 ---
 
 *Opdrachten:*
 
 1. Zoek in het JavaScript-venster naar voorbeelden van `if`. 
-2. Wat is de rol van `if (down) {...}` die in de functie `forward`? (De verkorte vorm, zonder `else`, behandelen we later.)
-
-    
-## Condities en vergelijkingen
-
-Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkingsoperatoren zijn "a gelijk aan b" - in JavaScript, `a === b`, en "a verschilt van b":  `a !== b`
-
-*Opmerking:* er zijn ook vergelijkingsoperatoren met een `=` minder: `a == b` en `a != b`. Deze kun je in het algemeen beter niet gebruiken.
-
----
-
-*Opdrachten:*
-
-* PM
-* PM      
+2. Wat is de rol van `if (down) {...}` in de functie `forward`? (De verkorte vorm, zonder `else`, behandelen we later.)
 
 ## IF: verkorte vorm
 
@@ -71,11 +58,30 @@ if (cond) {
   // no command
 }
 ```
+    
+## Condities en vergelijkingen
 
+Een conditie bevat vaak een vergelijking van waarden. De eenvoudigste vergelijkingsoperatoren zijn "a gelijk aan b" - in JavaScript, `a === b`, en "a verschilt van b":  `a !== b`
+
+*Opmerking:* er zijn ook vergelijkingsoperatoren met een `=` minder: `a == b` en `a != b`. Deze kun je in het algemeen beter niet gebruiken.
+
+| vergelijking | betekenis |
+| :---         | :---      |
+| `a > b`      | `a` is groter dan `b` |
+| `a >= b`     | `a` is tenminste `b`  |
+| `a < b`      | `a` is kleiner dan `b` |
+| `a >= b`     | `a` is ten hoogste `b` |
+
+---
+
+*Opdrachten:*
+
+* PM
+* PM
 
 ## Voorbeeld: trapje
 
-We tekenen een trapje, met zijde 10, waarbij het aantal zijden gegeven is. De elementaire stap is dan niet een trede, maar een zijde ("halve trede"). De even zijden tekenen we horizontaal, de oneven verticaal. De draaiing aan het eind van een zijde hangt er dan van af of we met een even stap (draai naar rechts) of met een oneven stap (draai naar links) van de herhaling te maken hebben.
+We tekenen een trapje, met zijde 10, waarbij het aantal zijden gegeven is. De elementaire stap is dan niet een trede, maar een zijde ("halve trede"). De even zijden tekenen we horizontaal, de oneven verticaal. Bij een even stap in de herhaling gebruiken we een draai naar rechts, bij een oneven stap een draai naar links.
 
 ```js
 function stairSide(n) {
@@ -88,7 +94,7 @@ function stairSide(n) {
 }
 ```
 
-We leggen later de conditie `n % 2 === 0` uit: deze is `true` als `n` deelbaar is door 2, ofwel: n is even.
+De conditie `n % 2 === 0` betekent: `n` deelbaar door 2, ofwel: `n` is even. De operator `a % b` geeft de rest van de deling `a / b`.
 
 ---
 
